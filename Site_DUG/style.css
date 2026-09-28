@@ -1,0 +1,26 @@
+body {
+    background-image: url("./images/icones/bdrop2.jpg");
+    background-repeat: no-repeat;  
+    background-size:cover;
+    background-position:top;
+    background-color: black;
+
+}
+
+.banniere {
+    background-color: #4B4E4F;
+    color: #dadada;
+}
+
+/*couleurs:*/
+.legende {color:
+#010101
+#282322
+#4B4E4F
+#909391
+#648895
+#1C7898
+#E23333
+#AD1C23
+#6B0E18
+}
