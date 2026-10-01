@@ -3,18 +3,12 @@
 }
 
 body {
-    background-image: url("./images_background/icones/bdrop2.jpg");
+    background-image: url("./images/elements_site/bdrop2.jpg");
     background-repeat: no-repeat;  
     background-size:cover;
     background-position:top;
     background-color: black;
 
-}
-
-.banniere {
-    background-color: #4B4E4F;
-    color: #dadada;
-    opacity: 75%;
 }
 
 /*couleurs:*/
@@ -44,11 +38,11 @@ body {
     padding: 0;
 }
 
-.entete_principal {
-    background-color:#4B4E4F;
-}
 
 .banniere {
+    background-color: #4B4E4F;
+    color: #dadada;
+    opacity: 75%;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
