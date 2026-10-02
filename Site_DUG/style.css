@@ -2,8 +2,10 @@
 
 :root {
     --gal_primaire_fonce: #282322;
-    --gal_primaire_pales: #dadada;    
-    --gal_bg_entetes: #4B4E4F;
+    --gal_primaire_pales: #dadada;
+    --gal_bg_pale_75: rgb(218, 218, 218, 0.75);    
+    --gal_second_moyen: #4B4E4F;
+    --gal_bg_entetes_75: rgb(75, 78, 79, 0.75);
     --gal_second_bleu: #1C7898;
     --gal_bg_surligne: #648895;
     --gal_second_rouge: #6B0E18;
@@ -33,9 +35,8 @@ body {
 }
 
 .banniere {
-    background-color: var(--gal_bg_entetes);
+    background-color: var(--gal_bg_entetes_75);
     color: var(--gal_primaire_pales);
-    opacity: 75%;
     max-width: 100%;
     margin: auto;
     display: flex;
@@ -49,7 +50,7 @@ body {
 }
 
 .nav-bar-icon {
-    height: 60px;
+    height: 40px;
     margin: auto
 }
 
@@ -81,7 +82,7 @@ body {
 }
 
 .carte_equipage{
-    background-color:var(--gal_primaire_pales) ;
+    background-color:var(--gal_bg_pale_75) ;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +91,7 @@ body {
     padding: 15px 30px;
     margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    opacity: 75%;
+
 
 }
 .image_equipage{
@@ -137,15 +138,19 @@ body {
 }
 
 .pied-page{
-    text-align: center;
+    background-color: var(--gal_bg_entetes_75);
     font-family: 'Michroma', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     color: var(--gal_primaire_pales);
 }
-#pied-link{
-    text-decoration: none;
+.pied-page a{
     color: var(--gal_primaire_pales);
 }
+
+.pied-page-p {
+    font-size: 13px;
+}
+
 .carte-bouton {
     background-color: var(--gal_bg_surligne);
     opacity: 100%;
