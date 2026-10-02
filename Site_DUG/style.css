@@ -30,12 +30,16 @@ body {
 
 body {
     background-color: #eef2f7;
-    color: #1f2937;
+    color: #1C7898;
     font-family: 'Michroma', sans-serif;
     font-size: 40px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto; 
 }
 
 .banniere {
@@ -254,6 +258,35 @@ body {
     width: 30%;
 
 }
+.lead{
+    color:#1C7898 ;
+}
+.btn-tel{
+    padding: 10px 24px;
+    font-size: 15px;
+    background-color: #1a6f8a;
+    border: 2px solid #3ca5c4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(60, 165, 196, 0.5);
+    white-space: nowrap;
+}
+.btn-tel:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+#container-telephone{
+    max-width: 6000px;
+    margin: 0 auto; 
+}
+.form-label{
+    white-space: nowrap;
+    font-size: 25px;
+}
+.form-check{
+    font-size: 25px;
+}
+
 @media(min-widht: 700px) {
     .entete{
         flex-direction: row;

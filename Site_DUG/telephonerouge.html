@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
@@ -23,8 +22,163 @@
                 <a href="telephonerouge.html">Le téléphone rouge</a>
             </div>
         </div>
-    </header> 
+    </header>
 
-    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <div class="container-telehpone text-center" id="container-telehpone">
+        <div class="row align-items-start justify-content-center">
+            <div class="col-12 col-md-3 mb-4 mb-md-0">
+                <img src="images\elements_site\Téléphonerouge_nobg.png" alt="telephone rouge" class="img-fluid"
+                    style="max-height: 350px;">
+            </div>
+
+            <div class="col-12 col-md-8 mx-auto text-start">
+                <p class="lead font-sans-serif mb-0" style="max-width: 46rem; font-size: 35px; line-height: 1.5;">
+                    Bonjour et bienvenue au service d'assistance du Romano Fafard.
+                    Vous avez 3 options. Pour un déménagement ou un changement d'adresse de
+                    station orbitale, appuyez sur 1.
+                    <br>Pour nous téléfaxer votre avis ou nous informer d'une erreur ou d'une
+                    information non répertoriée, utilisez ce formulaire.
+                </p>
+                
+                <div class="d-inline-flex flex-row gap-3 mt-5 mb-5 justify-content-center justify-content-md-start">
+                    <button class="btn-tel px-4 py-2 text-black" type="click" src="#formulaire-telefaxe">Téléfaxer un message</button>
+                    <button class="btn-tel px-4 py-2 text-black" type="click" src="#formulaire-ajout">Proposer un ajout/modification</button>
+                </div>
+
+                <form action="merci.html" method="get" class="formulaire-telefaxe mt-4 col-12 col-md-8 ms-0" id="formulaire-telefaxe">
+                    <fieldset>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="votre-nom">Votre nom :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="text" id="votre-nom" name="nom" placeholder="Ex: Capitaine Patenaude" minlength="2" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="votre-courriel">Votre Courriel :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="email" id="votre-courriel" name="email" placeholder="nom@romano-fafard.com" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="votre-sujet">Sujet :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="text" id="votre-sujet" name="sujet" placeholder="Ex: Rapport d'anomalie" minlength="4" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-12 text-start">
+                                <label class="form-label mt-2" for="votre-message">Votre message :</label>
+                            </div>
+                            <div class="col-12">
+                                <textarea id="votre-message" name="message" class="form-control rounded-5" rows="5" placeholder="Écrivez votre téléfax ici..." minlength="15" required></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4 mb-4">
+                            <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold" type="submit">Activer le Téléfax</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+
+                <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-8 ms-0" id="formulaire-ajout">
+                    
+                    <fieldset class="mb-1 d-flex justify-content-center gap-3">
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" id="ajout" name="ajout/modif" value="ajout">
+                            <label class="form-check-label" for="ajout">Ajouter</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="modifier" name="ajout/modif" value="modifier">
+                            <label class="form-check-label" for="modifier">Modification</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="ajout-nom">Votre nom :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="text" id="ajout-nom" name="nom" placeholder="Ex: Capitaine Patenaude" minlength="2" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="ajout-courriel">Votre Courriel :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="email" id="ajout-courriel" name="email" placeholder="nom@romano-fafard.com" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="ajout-sujet">Sujet :</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control rounded-pill" type="text" id="ajout-sujet" name="sujet" placeholder="Ex: Rapport d'anomalie" minlength="4" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="section">Section : </label>
+                            </div>
+                            <div class="col-7">
+                                <select class="form-select rounded-pill" name="section" id="section">
+                                    <option value=""> Choisissez une section ...</option>
+                                    <option value="mission">La Mission</option>
+                                    <option value="rencontres">Les rencontres</option>
+                                    <option value="equipage">L'équipage</option>
+                                    <option value="voyage">Le voyage</option>
+                                    <option value="vaisseau">Le vaisseau</option>
+                                    <option value="citations">Citations</option>
+                                    <option value="tel_rouge"> Le téléphone rouge</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-1">
+                            <div class="col-5 text-end">
+                                <label class="form-label m-0" for="reference">Référence : </label>
+                            </div>
+                            <div class="col-7">
+                                <select class="form-select rounded-pill" name="reference" id="reference">
+                                    <option value=""> Choisir saisons / films ...</option>
+                                    <option value="saison1">Saison 1</option>
+                                    <option value="saison2">Saison 2</option>
+                                    <option value="saison3">Saison 3</option>
+                                    <option value="saison4">Saison 4</option>
+                                    <option value="film1">Film 1</option>
+                                    <option value="film2">Film 2</option>
+                                    <option value="film3">Film 3</option>
+                                    <option value="autre2">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-12 text-start">
+                                <label class="form-label mt-2" for="votre-ajout">Décrivez l'ajout/changement proposé :</label>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <textarea id="votre-ajout" name="ajout" class="form-control rounded-5" rows="5" placeholder="Écrivez votre ajout/changement ici..." minlength="15" required></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4 mb-4">
+                            <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold" type="submit">Activer le Téléfax</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+<footer class="pied-page">
+        <p>Tous droit reserver - 2026 - <a href="#equipage" id="pied-link"> À propos</a> </p>
+</footer> 
 </body>
 </html>
