@@ -11,17 +11,28 @@
     
 </head>
 <body>
-    <header>
-        <div class="banniere">
-            <h1>Le voyage</h1>
-            <div>
-                <a href="index.html">La Mission</a>
-                <a href="rencontres.html">Les rencontres</a>
-                <a href="equipage.html">L'équipage</a>
-                <a href="voyage.html">Le voyage</a>
-                <a href="vaisseau.html">Le vaisseau</a>
-                <a href="citations.html">Citations</a>
-                <a href="telephonerouge.html">Le téléphone rouge</a>
+    <header class="entete_principal">
+        <div class="banniere d-flex justify-content-between align-items-center">
+            <div class="banniere_titre d-flex justify-content-center gap-3">
+                <a class="d-flex" href="index.html">
+                <img class="nav-bar-icon" src=".\images\elements_site\G.png" alt="G">
+                </a>
+                <h1>Le voyage'</h1>
+            </div>
+
+            <div class="icon_vaisseau btn-group ">
+                <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="menu-image" src=".\images\vaisseau\ramano-fafard_2_no bg.png" alt="vaisseau">
+                </button>
+                <ul class="dropdown-menu menu-deroulant mt-3">
+                    <li><a class="dropdown-item" href="index.html">La Mission</a></li>
+                    <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
+                    <li><a class="dropdown-item" href="equipage.html">L'équipage</a></li>
+                    <li><a class="dropdown-item menu-item-actif" href="voyage.html">Le voyage</a></li>
+                    <li><a class="dropdown-item" href="vaisseau.html">Le vaisseau</a></li>
+                    <li><a class="dropdown-item" href="citations.html">Citations</a></li>
+                    <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
+                </ul>
             </div>
         </div>
     </header>
