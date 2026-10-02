@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+:root {
+    --gal_primaire_fonce: #282322;
+    --gal_primaire_pales: #dadada;
+    --gal_bg_pale_75: rgb(218, 218, 218, 0.75);    
+    --gal_second_moyen: #4B4E4F;
+    --gal_bg_entetes_75: rgb(75, 78, 79, 0.75);
+    --gal_second_bleu: #1C7898;
+    --gal_bg_surligne: #648895;
+    --gal_second_rouge: #6B0E18;
+    
+    --gal_noir: #010101;
+    --gal_gris_pale: #909391;
+    --gal_rouge_petant: #E23333;
+    --gal_rouge_moyen: #AD1C23;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,30 +25,8 @@ body {
     background-repeat: no-repeat;  
     background-size:cover;
     background-position:top;
-    background-color: black;
-
-}
-
-/*couleurs:*/
-.legende {color:
-#010101
-#282322
-#4B4E4F
-#909391
-#648895
-#1C7898
-#E23333
-#AD1C23
-#6B0E18
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-
-
-
-body {
-    background-color: #eef2f7;
-    color: #1C7898;
+    background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales);
     font-family: 'Michroma', sans-serif;
     font-size: 40px;
     line-height: 1.5;
@@ -43,11 +39,10 @@ form {
 }
 
 .banniere {
-    background-color: #4B4E4F;
-    color: #dadada;
-    opacity: 75%;
+    background-color: var(--gal_bg_entetes_75);
+    color: var(--gal_primaire_pales);
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,8 +53,30 @@ form {
     font-size: 75px;
 }
 
+.nav-bar-icon {
+    height: 40px;
+    margin: auto
+}
+
+.menu-image {
+    height: 100px;
+}
+
+.menu-deroulant {
+    font-size: 20px;
+}
+
+.menu-deroulant a:hover {
+    background-color: var(--gal_bg_surligne);
+}
+
+.menu-item-actif {
+    color: var(--gal_second_rouge);
+    font-weight: bold;
+}
+
 .intro_equipage {
-    color: #1C7898;
+    color: var(--gal_second_bleu);
 }
 
 
@@ -69,7 +86,7 @@ form {
 }
 
 .carte_equipage{
-    background-color:#dadada ;
+    background-color:var(--gal_bg_pale_75) ;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -78,13 +95,13 @@ form {
     padding: 15px 30px;
     margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    opacity: 75%;
+
 
 }
 .image_equipage{
     width: 100px;
     height: 110px;
-    border: 5px solide #648895;
+    border: 5px solide var(--gal_bg_surligne);
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
@@ -109,42 +126,48 @@ form {
 }
 
 .information h2{
-    color: #6B0E18; /* Rouge foncé pour les noms */
+    color: var(--gal_second_rouge); /* Rouge foncé pour les noms */
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 5px
 }
 .information p{
-    color: #6B0E18; /* Rouge foncé pour les noms */
+    color: var(--gal_second_rouge); /* Rouge foncé pour les noms */
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 5px
 }
 .information span{
-    color: #282322;
+    color: var(--gal_primaire_fonce);
 }
 
 .pied-page{
-    text-align: center;
+    background-color: var(--gal_bg_entetes_75);
     font-family: 'Michroma', sans-serif;
-    font-size: 20px;
-    color: #dadada;
+    font-size: 16px;
+    color: var(--gal_primaire_pales);
 }
-#pied-link{
-    text-decoration: none;
-    color: #dadada;
+.pied-page a{
+    color: var(--gal_primaire_pales);
 }
-.carte-bouton{
-    background-color: #1f2937;
+
+.pied-page-p {
+    font-size: 13px;
+}
+
+.carte-bouton {
+    background-color: var(--gal_bg_surligne);
+    opacity: 100%;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--gal_primaire_pales);
     text-decoration: none;
     padding: 10px;
     border-radius: 8px;
     margin-top: 12px;
     font-size: 13px;
     font-weight: bold;
+    
 
 }
 .modale{
@@ -165,7 +188,7 @@ form {
 }
 .modale-boite{
     position: relative;
-    background-color: white;
+    background-color: var(--gal_primaire_pales);
     border-radius: 16px ;
     padding: 26px;
     width: 90%;
@@ -180,7 +203,7 @@ form {
     position: absolute;
     top:15px;
     right: 20px;
-    color: #9ca3af;
+    color: var(--gal_gris_pale);
     text-decoration: none;
     font-size: 30px;
     padding: 4px 8px;
@@ -188,8 +211,8 @@ form {
     transition: 0.5s;
 }
 .modale-fermer:hover{
-    color: white;
-    background-color: #ef4444;
+    color: var(--gal_primaire_pales);
+    background-color: var(--gal_rouge_petant);
 }
 .modale-fond{
     position: absolute;
@@ -208,17 +231,20 @@ form {
     max-width: 250px;
     height: auto;
     border-radius: 10px;
-    border: 10px solid #648895;
+    border: 10px solid var(--gal_bg_surligne);
 }
 .info-gauche{
+    color: var(--gal_primaire_fonce);
     grid-column: 1;
     margin-top: 10px;
 }
 .info-droite{
+    color: var(--gal_primaire_fonce);
     grid-column: 2;
     grid-row: 1/ span 2 ;
 }
 .info-bas{
+    color: var(--gal_primaire_fonce);
     grid-column: 1 / span 2;
     padding-top: 15px;
     margin-top: 10px;
@@ -229,7 +255,7 @@ form {
     margin: 8px 0;
 }
 .titre{
-    color: #6B0E18; /* Rouge foncé pour les noms */
+    color: var(--gal_second_rouge); /* Rouge foncé pour les noms */
     font-size: 20px;
     font-weight: 500;
 }
@@ -244,8 +270,8 @@ form {
 }
 .btn-nav{
     display: block;
-    background-color: #1C7898;
-    color: #6B0E18;
+    background-color: var(--gal_second_bleu);
+    color: var(--gal_second_rouge);
     padding:10px;
     margin-top: 15px;
     text-decoration: none;
