@@ -68,6 +68,7 @@ body {
     background-color:#dadada ;
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
@@ -128,4 +129,135 @@ body {
 #pied-link{
     text-decoration: none;
     color: #dadada;
+}
+.carte-bouton{
+    background-color: #1f2937;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+.modale{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(218, 218, 218, 0.75);
+    align-items: center;
+    padding: 20px;
+}
+.modale:target{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modale-boite{
+    position: relative;
+    background-color: white;
+    border-radius: 16px ;
+    padding: 26px;
+    width: 90%;
+    max-width: 640px;
+    max-height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.modale-fermer{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.modale-fermer:hover{
+    color: white;
+    background-color: #ef4444;
+}
+.modale-fond{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.photo-profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photo-profil img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid #648895;
+}
+.info-gauche{
+    grid-column: 1;
+    margin-top: 10px;
+}
+.info-droite{
+    grid-column: 2;
+    grid-row: 1/ span 2 ;
+}
+.info-bas{
+    grid-column: 1 / span 2;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+.modale-boite p{
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+.titre{
+    color: #6B0E18; /* Rouge foncé pour les noms */
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-modale{
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding-top: 15px ;
+}
+.btn-nav{
+    display: block;
+    background-color: #1C7898;
+    color: #6B0E18;
+    padding:10px;
+    margin-top: 15px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    opacity: 75%;
+    width: 30%;
+
+}
+@media(min-widht: 700px) {
+    .entete{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
