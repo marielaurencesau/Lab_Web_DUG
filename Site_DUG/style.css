@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+:root {
+    --gal_primaire_fonce: #282322;
+    --gal_primaire_pales: #dadada;    
+    --gal_bg_entetes: #4B4E4F;
+    --gal_second_bleu: #1C7898;
+    --gal_bg_surligne: #648895;
+    --gal_second_rouge: #6B0E18;
+    
+    --gal_noir: #010101;
+    --gal_gris_pale: #909391;
+    --gal_rouge_petant: #E23333;
+    --gal_rouge_moyen: #AD1C23;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,30 +23,8 @@ body {
     background-repeat: no-repeat;  
     background-size:cover;
     background-position:top;
-    background-color: black;
-
-}
-
-/*couleurs:*/
-.legende {color:
-#010101
-#282322
-#4B4E4F
-#909391
-#648895
-#1C7898
-#E23333
-#AD1C23
-#6B0E18
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-
-
-
-body {
-    background-color: #eef2f7;
-    color: #1f2937;
+    background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales);
     font-family: 'Michroma', sans-serif;
     font-size: 40px;
     line-height: 1.5;
@@ -39,11 +33,11 @@ body {
 }
 
 .banniere {
-    background-color: #4B4E4F;
-    color: #dadada;
+    background-color: var(--gal_bg_entetes);
+    color: var(--gal_primaire_pales);
     opacity: 75%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,8 +48,30 @@ body {
     font-size: 75px;
 }
 
+.nav-bar-icon {
+    height: 60px;
+    margin: auto
+}
+
+.menu-image {
+    height: 100px;
+}
+
+.menu-deroulant {
+    font-size: 20px;
+}
+
+.menu-deroulant a:hover {
+    background-color: var(--gal_bg_surligne);
+}
+
+.menu-item-actif {
+    color: var(--gal_second_rouge);
+    font-weight: bold;
+}
+
 .intro_equipage {
-    color: #1C7898;
+    color: var(--gal_second_bleu);
 }
 
 
@@ -65,7 +81,7 @@ body {
 }
 
 .carte_equipage{
-    background-color:#dadada ;
+    background-color:var(--gal_primaire_pales) ;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -79,7 +95,7 @@ body {
 .image_equipage{
     width: 100px;
     height: 110px;
-    border: 5px solide #648895;
+    border: 5px solide var(--gal_bg_surligne);
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
@@ -104,28 +120,28 @@ body {
 }
 
 .information h2{
-    color: #6B0E18; /* Rouge foncé pour les noms */
+    color: var(--gal_second_rouge); /* Rouge foncé pour les noms */
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 5px
 }
 .information p{
-    color: #6B0E18; /* Rouge foncé pour les noms */
+    color: var(--gal_second_rouge); /* Rouge foncé pour les noms */
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 5px
 }
 .information span{
-    color: #282322;
+    color: var(--gal_primaire_fonce);
 }
 
 .pied-page{
     text-align: center;
     font-family: 'Michroma', sans-serif;
     font-size: 20px;
-    color: #dadada;
+    color: var(--gal_primaire_pales);
 }
 #pied-link{
     text-decoration: none;
-    color: #dadada;
+    color: var(--gal_primaire_pales);
 }
