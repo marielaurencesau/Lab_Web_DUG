@@ -33,6 +33,19 @@ body {
     margin: 0;
     padding: 0;
 }
+body.body-404 {
+    background-image: url("./images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
+    background-repeat: no-repeat;  
+    background-size:cover;
+    background-position:top;
+    background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales);
+    font-family: 'Michroma', sans-serif;
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
 form {
     max-width: 600px;
     margin: 0 auto; 
