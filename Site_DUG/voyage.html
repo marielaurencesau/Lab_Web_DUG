@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le voyage</title>
 
+
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    
+
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <header class="entete_principal">
         <div class="banniere d-flex justify-content-between align-items-center">
             <div class="banniere_titre d-flex justify-content-center gap-3">
                 <a class="d-flex" href="index.html">
-                <img class="nav-bar-icon" src=".\images\elements_site\G.png" alt="G">
+                    <img class="nav-bar-icon" src=".\images\elements_site\G.png" alt="G">
                 </a>
                 <h1>Le voyage'</h1>
             </div>
@@ -36,10 +39,133 @@
             </div>
         </div>
     </header>
-    
+    <main>
+        <!---------Chapeau--------->
+        <div class="page-chapeau container justify-content-center align-items-center ">
+            <p class=" fs-3 mt-4 mb-4 w-75 text-center">
+                Vous trouverez ici un répertoire des planètes, galaxies et autres astres visités lors du périple du
+                Romano-Fafard
+            </p>
+        </div>
+        <form class="d-flex" role="search">
+            <div class="input-group w-100 rounded-pill overflow-hidden">
+                <span class="input-group-text bg-white border-end-0">
+                    <i class="bi bi-search text-muted"></i>
+                </span>
+                <input type="search" class="form-control border-start-0 ps-0" placeholder="Rechercher..."
+                    aria-label="Search">
+            </div>
+        </form>
+
+        <fieldset id="accordeonEspace">
+
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <article class="carte" data-bs-toggle="collapse" data-bs-target="#Zoulou7" aria-expanded="false"
+                        aria-controls="Zoulou7" role="button" style="cursor: pointer;">
+                        <div class="information">
+                            <h2>Zoulou-7</h2>
+                            <div class="collapse" id="Zoulou7" data-bs-parent="#accordeonEspace">
+                                <div class="d-grid gap-3 pt-3 structure-carte">
+                                    <div class="photo">
+                                        <img src="./images/lieux/station_spatial.jpg" alt="">
+                                    </div>
+                                    <div class="info-droite">
+                                        <p>Type: <span>Station orbitale</span></p>
+                                        <p>Détails: <span>Station orbitale. Numéro de téléphone de la station:
+                                                44-28-44-12.
+                                            </span></p>
+                                        <p class="fs-6 mt-4">Réference: <span>Saison 1 épisode 1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <article class="carte" data-bs-toggle="collapse" data-bs-target="#DXG732" aria-expanded="false"
+                        aria-controls="DXG732" role="button" style="cursor: pointer;">
+                        <div class="information">
+                            <h2>DXG-7-32</h2>
+                            <div class="collapse" id="DXG732" data-bs-parent="#accordeonEspace">
+                                <div class="d-grid gap-3 pt-3 structure-carte">
+                                    <div class="photo">
+                                        <img src="./images/lieux/planete.jpg" alt="">
+                                    </div>
+                                    <div class="info-droite">
+                                        <p>Type: <span>Planètes</span></p>
+                                        <p>Détails: <span>Cette planète est balayée par des tempêtes épouvantables.
+                                            </span></p>
+                                        <p class="fs-6 mt-4">Réference: <span>Saison 1 épisode 1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <article class="carte" data-bs-toggle="collapse" data-bs-target="#Paparmanne-2"
+                        aria-expanded="false" aria-controls="Paparmanne-2" role="button" style="cursor: pointer;">
+                        <div class="information">
+                            <h2>Paparmanne-2</h2>
+                            <div class="collapse" id="Paparmanne-2" data-bs-parent="#accordeonEspace">
+                                <div class="d-grid gap-3 pt-3 structure-carte">
+                                    <div class="photo">
+                                        <img src="./images/lieux/sys_solaire.jpg" alt="">
+                                    </div>
+                                    <div class="info-droite">
+                                        <p>Type: <span>Système solaire</span></p>
+                                        <p>Détails: <span>Ce système solaire contient 162 planètes qui gravitent autour
+                                                d'un même soleil. </span></p>
+                                        <p class="fs-6 mt-4">Réference: <span>inconnue</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <article class="carte" data-bs-toggle="collapse" data-bs-target="#Hendrix44" aria-expanded="false"
+                        aria-controls="Hendrix44" role="button" style="cursor: pointer;">
+                        <div class="information">
+                            <h2>Hendrix44</h2>
+                            <div class="collapse" id="Hendrix44" data-bs-parent="#accordeonEspace">
+                                <div class="d-grid gap-3 pt-3 structure-carte">
+                                    <div class="photo">
+                                        <img src="./images/lieux/asteroide.jpg" alt="">
+                                    </div>
+                                    <div class="info-droite">
+                                        <p>Type: <span>Astéroide</span></p>
+                                        <p>Détails: <span>Une méchante grosse roche! </span></p>
+                                        <p class="fs-6 mt-4">Réference: <span>inconnue</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+
+    </main>
+
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
         <div class=" d-flex align-items-center justify-content-center gap-3">
-            <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal" data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
+            <p class="my-auto">Tous droits réservés</p> - <p class="my-auto">@ Doyle-Sauvé-2026</p> - <p
+                class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal"
+                    data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-1">
             <p class="pied-page-p">- photos et contenu tirés de la série et films Dans une galaxie près de vous -</p>
@@ -52,35 +178,36 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title text-black fs-1">À propos</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-black fs-5">
                     <p>Site web encyclopédique sur la série Dans une Galaxie près de chez vous</p>
-    
+
                     <p><strong>Par :</strong><br>
                         Rémi Doyle<br>
                         Marie Laurence Sauvé</p>
-    
+
                     <p><strong>Développé dans le cadre du cours :</strong><br>
                         420-931-MA Programmation Web (Front-End)<br>
                         gr. 25605 - Été 2026<br>
                         <strong>Professeur:</strong> Ahmed Imed Eddine Rabah
                     </p>
-    
+
                     <p>Collège de Maisonneuve<br>
                         LEA.8F Sécurité des applications mobiles, Web et de bureau</p>
-    
+
                     <p>Tout image est libre de droit, certaine image sont des <br>
                         captures d'écrans fait par les dévloppeurs lors de visionnement d'épisode et de films </p>
-    
+
                     <p>License unsplash <br>
                         https://unsplash.com/fr/photos/vue-dartiste-dun-trou-noir-dans-le-ciel-Md5Chaod3Ig</p>
                 </div>
-    
+
             </div>
-    
+
         </div>
     </div>
     <script src="vendor/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
