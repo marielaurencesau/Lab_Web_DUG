@@ -33,6 +33,19 @@ body {
     margin: 0;
     padding: 0;
 }
+body.body-404 {
+    background-image: url("./images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
+    background-repeat: no-repeat;  
+    background-size:cover;
+    background-position:top;
+    background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales);
+    font-family: 'Michroma', sans-serif;
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
 form {
     max-width: 600px;
     margin: 0 auto; 
@@ -85,7 +98,7 @@ form {
     flex-direction: column;
 }
 
-.carte_equipage{
+.carte{
     background-color:var(--gal_bg_pale_75) ;
     border-radius: 20px;
     display: flex;
@@ -171,7 +184,7 @@ form {
 
 }
 .modale{
-    display: none;
+    display:none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -221,15 +234,15 @@ form {
     left: 0;
     right: 0;
 }
-.photo-profil{
+.photo{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.photo-profil img{
+.photo img{
     width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 250px;
     border-radius: 10px;
     border: 10px solid var(--gal_bg_surligne);
 }
@@ -311,6 +324,10 @@ form {
 }
 .form-check{
     font-size: 25px;
+}
+.structure-carte {
+    display: grid !important; 
+    grid-template-columns: 250px 1fr;
 }
 
 @media(min-widht: 700px) {
