@@ -3,6 +3,8 @@
 Bolder: ( Russo One )
 */
 
+
+
 :root {
     --gal_primaire_fonce: #282322;
     --gal_primaire_pales: #dadada;
@@ -18,6 +20,8 @@ Bolder: ( Russo One )
     --gal_gris_pale: #909391;
     --gal_rouge_petant: #E23333;
     --gal_rouge_moyen: #AD1C23;
+    --police-titres: 'Russo One', Verdana, sans-serif; 
+    --police-texte: 'Michroma', Verdana, sans-serif;
 }
 
 * {
@@ -31,7 +35,7 @@ body {
     background-position:top;
     background-color: var(--gal_noir);
     color: var(--gal_primaire_pales);
-    font-family: 'Michroma', sans-serif;
+    font-family: var(--police-texte);
     font-size: 40px;
     line-height: 1.5;
     margin: 0;
@@ -44,7 +48,7 @@ body.body-404 {
     background-position:top;
     background-color: var(--gal_noir);
     color: var(--gal_primaire_pales);
-    font-family: 'Michroma', sans-serif;
+    font-family: var(--police-texte);
     font-size: 40px;
     line-height: 1.5;
     margin: 0;
@@ -63,10 +67,14 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .banniere-titre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-wrap: nowrap;
     font-size: clamp(1.75rem, 4vw, 3.5rem);
     
 }
