@@ -6,35 +6,133 @@
     <title>Le vaisseau</title>
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="./images/icones/fav-rf.png">
 
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header class="entete_principal">
-        <div class="banniere d-flex justify-content-between align-items-center">
-            <div class="banniere_titre d-flex justify-content-center gap-3">
+        <div class="banniere d-flex justify-content-between align-items-center p-3">
+            <div class="banniere_titre d-flex justify-content-center gap-2 gap-lg-4">
                 <a class="d-flex" href="index.html">
-                <img class="nav-bar-icon" src="./images/elements_site/logo_galaxie_rouge.png" alt="Logo rouge Dans une Galaxie">                </a>
-                <h1>Le vaisseau</h1>
+                    <img class="entete-icone" src="./images/icones/Romano-Fafard_10.png" alt="icone vaisseau">
+                </a>
+                <h1 class="banniere-titre text-m-nowrap">La Mission</h1>
             </div>
+            <div class="d-flex align-items-center justify-content-center pe-1  pe-xl-5">
+                <!--------navigation-étendu-------->
+                <div class="d-none d-m-flex d-lg-flex gap-5">
 
-            <div class="icon_vaisseau btn-group ">
-                <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="menu-image" src="./images/vaisseau/ramano-fafard_2_no_bg.png" alt="vaisseau">
-                </button>
-                <ul class="dropdown-menu menu-deroulant mt-3">
-                    <li><a class="dropdown-item" href="index.html">La Mission</a></li>
-                    <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
-                    <li><a class="dropdown-item" href="equipage.html">L'équipage</a></li>
-                    <li><a class="dropdown-item" href="voyage.html">Le voyage</a></li>
-                    <li><a class="dropdown-item menu-item-actif" href="vaisseau.html">Le vaisseau</a></li>
-                    <li><a class="dropdown-item" href="citations.html">Citations</a></li>
-                    <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
-                </ul>
+                    <!--------piton Mission-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="index.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center ">
+                                <img class="nav-bar-icon" src="images/icones/terre.png" alt="La Mission">
+                            </div>
+                            <div class="nav-bar-texte mb-0 fs-6 text-nowrap text-decoration-none">
+                                <p class="nav-p">La Mission</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------piton equipage-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="equipage.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/equipage.png" alt="equipage">
+                            </div>
+                            <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
+                                <p>L'équipage</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------piton voyage-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="voyage.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/planete.png" alt="voyage">
+                            </div>
+                            <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
+                                <p>Le voyage</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------piton rencontres-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="rencontres.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/alien.png" alt="rencontres">
+                            </div>
+                            <div class="nav-bar-texte nbt-long text-decoration-none">
+                                <p class="text-center">Les rencontres</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------piton citations-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="citations.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/citation.png" alt="citations">
+                            </div>
+                            <div class="nav-bar-texte nbt-long  text-decoration-none">
+                                <p class="text-center">Les citations</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--------le téléphone rouge-------->
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="telephonerouge.html" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/telephone.png" alt="telephone rouge">
+                            </div>
+                            <div class="nav-bar-texte nbt-long text-nowrap text-decoration-none">
+                                <p class="text-center">Le téléphone <br> rouge</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------piton vaisseau-------->
+                    <!--page vaisseau masquée pour le moment-->
+                    <div class="boite-item-nav page-active d-none d-flex flex-column align-items-center position-relative">
+                        <a href="vaisseau.html" aria-current="page" class="nav-bar-lien w-100">
+                            <div class="nav-bar-icon-bloc d-flex justify-content-center">
+                                <img class="nav-bar-icon" src="images/icones/romanofafard.png" alt="vaisseau">
+                            </div>
+                            <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
+                                <p>Le vaisseau</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--------menu déroulant-------->
+                    <div>
+
+                    </div>
+                </div>
+
+                <!--------bouton-menu-------->
+                <div class="btn-group">
+                    <button type="button" class="btn d-lg-none d-m-none" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-rocket h1 icone-menu-deroulant"></i>
+                    </button>
+                    <ul class="dropdown-menu menu-deroulant mt-3">
+                        <li><a class="dropdown-item" href="index.html">La Mission</a></li>
+                        <li><a class="dropdown-item" href="equipage.html">L'équipage</a></li>
+                        <li><a class="dropdown-item" href="voyage.html">Le voyage</a></li>
+                        <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
+                        <li><a class="dropdown-item" href="citations.html">Citations</a></li>
+                        <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
+                        <!--page vaisseau masquée pour le moment-->
+                        <li class="d-none"><a class="dropdown-item menu-item-actif" href="vaisseau.html">Le vaisseau</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header> 
-    
+    </header>
+    <main>
+
+    </main> 
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
         <div class=" d-flex align-items-center justify-content-center gap-3">
             <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal" data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
