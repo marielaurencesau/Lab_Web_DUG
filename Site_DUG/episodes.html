@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les citations</title>
+    <title>Les épisodes</title>
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="icon" href="./images/icones/fav-rf.png">
 
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <header class="entete_principal">
         <div class="banniere d-flex justify-content-between align-items-center p-3">
@@ -19,7 +21,7 @@
                 <a class="d-flex" href="index.html">
                     <img class="entete-icone" src="./images/icones/Romano-Fafard_10.png" alt="icone vaisseau">
                 </a>
-                <h1 class="banniere-titre text-m-nowrap">Les citations</h1>
+                <h1 class="banniere-titre text-m-nowrap">Les épisodes</h1>
             </div>
             <div class="d-flex align-items-center justify-content-center pe-1  pe-xl-5">
                 <!--------navigation-étendu-------->
@@ -27,7 +29,7 @@
 
                     <!--------piton Mission-------->
                     <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
-                        <a href="index.html" class="nav-bar-lien w-100">
+                        <a href="index.html" aria-current="page" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center ">
                                 <img class="nav-bar-icon" src="images/icones/terre.png" alt="La Mission">
                             </div>
@@ -70,8 +72,8 @@
                         </a>
                     </div>
                     <!--------piton citations-------->
-                    <div class="boite-item-nav page-active d-flex flex-column align-items-center position-relative">
-                        <a href="citations.html"  aria-current="page" class="nav-bar-lien w-100">
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="citations.html" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center">
                                 <img class="nav-bar-icon" src="images/icones/citation.png" alt="citations">
                             </div>
@@ -93,8 +95,8 @@
                         </a>
                     </div>
                     <!--------les épisodes-------->
-                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
-                        <a href="episodes.html" class="nav-bar-lien w-100">
+                    <div class="boite-item-nav page-active d-flex flex-column align-items-center position-relative">
+                        <a href="episodes.html" aria-current="page" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center">
                                 <img class="nav-bar-icon" src="images/icones/logo_icone.png" alt="telephone rouge">
                             </div>
@@ -128,9 +130,9 @@
                         <li><a class="dropdown-item" href="equipage.html">L'équipage</a></li>
                         <li><a class="dropdown-item" href="voyage.html">Le voyage</a></li>
                         <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
-                        <li><a class="dropdown-item menu-item-actif" href="citations.html">Citations</a></li>
-                        <li><a class="dropdown-item" href="épisodes.html">Les épisodes</a></li>
+                        <li><a class="dropdown-item" href="citations.html">Citations</a></li>
                         <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
+                        <li><a class="dropdown-item menu-item-actif" href="épisodes.html">Les épisodes</a></li>
                         <!--page vaisseau masquée pour le moment-->
                         <li class="d-none"><a class="dropdown-item" href="vaisseau.html">Le vaisseau</a></li>
                     </ul>
@@ -138,94 +140,127 @@
             </div>
         </div>
     </header>
-    <main>  
-
-        <div class="page-chapeau container justify-content-center align-items-center ">
+    <main>
+        <!--------chapeau-------->
+        <div class="page-chapeau container d-flex justify-content-center align-items-center ">
             <p class=" fs-3 mt-4 mb-4 w-75 text-center">
-                Il s'en dit bien des choses mémorables lors d'une mission interspatiale!
+                Vous trouverez ici la description de toutes les archives vidéo documentant les événements du voyage du
+                Romano Fafard.
+                <br>
+                <span class="fs-5">(En d'autres mots, voici la liste des épisodes...)</span>
             </p>
         </div>
-        <fieldset class="citations">
-            <div class="row justify-content-center">
-                <div class="carte col-8 mx-auto">
-                    <figure class="information quote-box pt-4 shadow-sm">
-                        <blockquote class="blockquote mb-0">
-                            <span class="mb-3 fs-2">« Après la pluie... le gazon est mouillé ! »</span>
-                        </blockquote>
-                        
-                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
-                            Capitaine Charles Patenaude, <cite title="Épisode">S1E2</cite>
-                        </figcaption>
-                    </figure>
-                </div>
+
+
+        <!--------tableau-------->
+        <div class="w-75 m-auto mt-4">
+
+            <h2 class="h2 mb-3">La télésérie</h2>
+
+            <div class="conteneur-table rounded-3 overflow-hidden border mb-4">
+                <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                    <thead class="fs-5">
+                        <tr class="ligne-table-titre">
+                            <th colspan="4" class="text-center">Saison 1</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="colonne1">N° épisode</th>
+                            <th scope="col" class="colonne2">Titre</th>
+                            <th scope="col" class="colonne3">Diffusion originale</th>
+                            <th scope="col" class="colonne4">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fs-6">
+                        <tr>
+                            <td>1</td>
+                            <td>Attendez-nous pas pour souper!</td>
+                            <td>1999-01-25</td>
+                            <td>Après six mois de recherche infructueuse d'une planète habitable, l'équipage doit aller explorer plus loin dans l'espace. Ceci implique qu'ils ne seront plus en mesure de communiquer avec la Terre, à la grande crainte de Brad.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob, bu</td>
+                            <td>1999-01-25</td>
+                            <td>Bob se fait accidentellement déshydrater lorsqu'on a besoin de lui pour entrer dans l'orbite d'une planète.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tout feu tout flamme</td>
+                            <td>1999-02-01</td>
+                            <td>Le capitaine et Valence n'arrivent plus à se cacher leur amour.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Le secret</td>
+                            <td>1999-02-15</td>
+                            <td>Brad ne compte pas laisser le capitaine et Valence entretenir leurs nouveaux liens.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Le huitième passager</td>
+                            <td>1999-02-22</td>
+                            <td>Brad affirme avoir vu une créature extra-terrestre dans le vaisseau, mais le reste de l'équipage ne le croit pas.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Le réveil de Flavien</td>
+                            <td>1999-03-01</td>
+                            <td>Flavien se fait sortir de régénérescence après que l'électricité ait été coupée, ce qui pourrait lui être fatal.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>La liste</td>
+                            <td>1999-03-08</td>
+                            <td>Brad omet de dire à Falbo qu'un exercice de défense va être tenu. Falbo se retrouve ainsi convaincu que des extraterrestres ont envahi le vaisseau.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>La course contre la montre</td>
+                            <td>1999-03-15</td>
+                            <td>Le capitaine Patenaude est atteint d'une crise d'appendicite. Mirabella, avec l'aide de Valence, tente de l'opérer. Durant ce temps, Brad prend le commandement du vaisseau. Ayant repéré une planète qui semble prometteuse, il exige à Bob et à Flavien de se dépêcher de l'atteindre avant que le capitaine ne puisse reprendre son poste, pour être celui ayant accompli la mission.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Le virus</td>
+                            <td>1999-03-22</td>
+                            <td>Brad donne un virus à Gervais et Bob enclenche l'auto-destruction du vaisseau pendant qu'il est somnambule.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Tou-tou-tou-touuut!</td>
+                            <td>1999-03-29</td>
+                            <td>L'équipage se met à entendre des sons inconnus provenant d'extra-terrestres.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Le procès</td>
+                            <td>1999-04-05</td>
+                            <td>Brad est en procès pour avoir faussé les rapports de sonde.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Le verglas</td>
+                            <td>1999-04-12</td>
+                            <td>Le Romano Fafard est emprisonné sous une immense couche de verglas.</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Capitaine d'un jour</td>
+                            <td>1999-04-19</td>
+                            <td>Flavien, Brad et Bob doivent remporter un défi pour gagner la chance d'être capitaine d'un jour.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="carte col-8 mx-auto">
-                    <figure class="information quote-box pt-4 shadow-sm">
-                        <blockquote class="blockquote mb-0">
-                            <span class="mb-3 fs-2">« Retroussons notre courage et prenons nos manches à deux mains ! »</span>
-                        </blockquote>
-                        
-                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
-                            Capitaine Charles Patenaude, <cite title="Épisode">S1E3</cite>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="carte col-8 mx-auto">
-                    <figure class="information quote-box pt-4 shadow-sm">
-                        <blockquote class="blockquote mb-0">
-                            <span class="mb-3 fs-2">«Et comme le disait le baron Pierre de Coubertin... « La volonté... c'est comme l'acné : plus t'en as... plus ça paraît ! »</span>
-                        </blockquote>
-                        
-                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
-                            Capitaine Charles Patenaude, <cite title="Épisode">S1E3</cite>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="carte col-8 mx-auto">
-                    <figure class="information quote-box pt-4 shadow-sm">
-                        <blockquote class="blockquote mb-0">
-                            <span class="mb-3 fs-2">« La nuit porte...la nuit porte...la nuit porte de garage »</span>
-                        </blockquote>
-                        
-                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
-                            Capitaine Charles Patenaude, <cite title="Épisode">S3E1</cite>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="carte col-8 mx-auto">
-                    <figure class="information quote-box pt-4 shadow-sm">
-                        <blockquote class="blockquote mb-0">
-                            <span class="mb-3 fs-2">«- Ark ! J'ai bu du jus de tête !<br>
-                                                    - Bob, ça peut pas vraiment faire de tort...»</span>
-                        </blockquote>
-                        
-                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
-                            Bob,Pétrolia, <cite title="Épisode">S1E3</cite>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-        </fieldset>
-
-        
+        </div>
 
 
-    </main>    
+    </main>
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
         <div class=" d-flex align-items-center justify-content-center gap-3">
-            <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal" data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
+            <p class="my-auto">Tous droits réservés</p> - <p class="my-auto">@ Doyle-Sauvé-2026</p> - <p
+                class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal"
+                    data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-1">
             <p class="pied-page-p">- photos et contenu tirés de la série et films Dans une galaxie près de vous -</p>
@@ -238,35 +273,36 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title text-black fs-1">À propos</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-black fs-5">
                     <p>Site web encyclopédique sur la série Dans une Galaxie près de chez vous</p>
-    
+
                     <p><strong>Par :</strong><br>
                         Rémi Doyle<br>
                         Marie Laurence Sauvé</p>
-    
+
                     <p><strong>Développé dans le cadre du cours :</strong><br>
                         420-931-MA Programmation Web (Front-End)<br>
                         gr. 25605 - Été 2026<br>
                         <strong>Professeur:</strong> Ahmed Imed Eddine Rabah
                     </p>
-    
+
                     <p>Collège de Maisonneuve<br>
                         LEA.8F Sécurité des applications mobiles, Web et de bureau</p>
-    
+
                     <p>Tout image est libre de droit, certaine image sont des <br>
                         captures d'écrans fait par les dévloppeurs lors de visionnement d'épisode et de films </p>
-    
+
                     <p>License unsplash <br>
                         https://unsplash.com/fr/photos/vue-dartiste-dun-trou-noir-dans-le-ciel-Md5Chaod3Ig</p>
                 </div>
-    
+
             </div>
-    
+
         </div>
     </div>
     <script src="vendor/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

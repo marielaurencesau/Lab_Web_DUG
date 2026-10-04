@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+/*Normal: ( Michroma )
+Bolder: ( Russo One )
+*/
 
 :root {
     --gal_primaire_fonce: #282322;
@@ -396,6 +399,36 @@ border-radius: 8px;
 .structure-carte {
     display: grid !important; 
     grid-template-columns: 250px 1fr;
+}
+
+.tableau-episodes thead tr th {
+    background-color: var(--gal_bg_surligne);
+    color: var(--gal_primaire_pales);
+}
+
+.tableau-episodes thead tr.ligne-table-titre th  {
+    background-color: var(--gal_second_bleu);
+    color: var(--gal_primaire_pales);
+}    
+
+.tableau-episodes tbody tr td {
+    background-color: var(--gal_bg_pale_75);
+    color: var(--gal_primaire_fonce);
+}
+.colonne1{
+    width: 10%
+}
+
+.colonne2{
+    width: 30%
+}
+
+.colonne3{
+    width: 15%
+}
+
+.colonne4{
+    width: 45%
 }
 
 @media(min-widht: 700px) {
