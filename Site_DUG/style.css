@@ -169,13 +169,14 @@ border-radius: 8px;
 
 .page-chapeau {
     color: var(--gal_second_bleu);
+    
 }
 
 
-.container{
+/*.container{
     display: flex;
     flex-direction: column;
-}
+}*/
 
 .carte{
     background-color:var(--gal_bg_pale_75) ;
@@ -441,6 +442,32 @@ border-radius: 8px;
 
 .texte-accueil-site {
     color: var(--gal_primaire_pales);
+}
+
+.carte-personnage {
+    width: 280px; 
+    min-width: 230px;
+    background-color: var(--gal_bg_pale_75);
+}
+.carte-perso-image {
+    background-color: var(--gal_bg_surligne);
+}
+.carte-perso-libele{
+    color: var(--gal_second_rouge);
+}
+
+.carte-perso-valeur{
+    color: var(--gal_primaire_fonce);
+}
+
+.carte-perso-badge-hostile {
+    background-color: var(--gal_rouge_moyen);
+    color: var(--gal_gris_pale);
+}
+
+.carte-perso-badge-amical {
+    background-color: var(--gal_second_bleu);
+    color: var(--gal_gris_pale);
 }
 
 @media(min-widht: 700px) {
