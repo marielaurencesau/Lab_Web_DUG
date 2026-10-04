@@ -15,13 +15,13 @@
         <div class="banniere d-flex justify-content-between align-items-center">
             <div class="banniere_titre d-flex justify-content-center gap-3">
                 <a class="d-flex" href="index.html">
-                <img class="nav-bar-icon" src=".\images\elements_site\logo_galaxie_rouge.png" alt="Logo rouge Dans une Galaxie">                </a>
+                <img class="nav-bar-icon" src="./images/elements_site/logo_galaxie_rouge.png" alt="Logo rouge Dans une Galaxie">                </a>
                 <h1>Citations</h1>
             </div>
 
             <div class="icon_vaisseau btn-group ">
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="menu-image" src=".\images\vaisseau\ramano-fafard_2_no bg.png" alt="vaisseau">
+                    <img class="menu-image" src="./images/vaisseau/ramano-fafard_2_no_bg.png" alt="vaisseau">
                 </button>
                 <ul class="dropdown-menu menu-deroulant mt-auto">
                     <li><a class="dropdown-item" href="index.html">La Mission</a></li>
@@ -36,25 +36,134 @@
         </div>
     </header>
     <main>  
-        <!---------Chapeau--------->
+
         <div class="page-chapeau container justify-content-center align-items-center ">
             <p class=" fs-3 mt-4 mb-4 w-75 text-center">
-                chapeau citations
+                Il s'en dit bien des choses mémorables lors d'une mission interspatiale!
             </p>
         </div>
+        <fieldset class="citations">
+            <div class="row justify-content-center">
+                <div class="carte col-8 mx-auto">
+                    <figure class="information quote-box pt-4 shadow-sm">
+                        <blockquote class="blockquote mb-0">
+                            <span class="mb-3 fs-2">« Après la pluie... le gazon est mouillé ! »</span>
+                        </blockquote>
+                        
+                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
+                            Capitaine Charles Patenaude, <cite title="Épisode">S1E2</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
 
+            <div class="row justify-content-center">
+                <div class="carte col-8 mx-auto">
+                    <figure class="information quote-box pt-4 shadow-sm">
+                        <blockquote class="blockquote mb-0">
+                            <span class="mb-3 fs-2">« Retroussons notre courage et prenons nos manches à deux mains ! »</span>
+                        </blockquote>
+                        
+                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
+                            Capitaine Charles Patenaude, <cite title="Épisode">S1E3</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
 
+            <div class="row justify-content-center">
+                <div class="carte col-8 mx-auto">
+                    <figure class="information quote-box pt-4 shadow-sm">
+                        <blockquote class="blockquote mb-0">
+                            <span class="mb-3 fs-2">«Et comme le disait le baron Pierre de Coubertin... « La volonté... c'est comme l'acné : plus t'en as... plus ça paraît ! »</span>
+                        </blockquote>
+                        
+                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
+                            Capitaine Charles Patenaude, <cite title="Épisode">S1E3</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="carte col-8 mx-auto">
+                    <figure class="information quote-box pt-4 shadow-sm">
+                        <blockquote class="blockquote mb-0">
+                            <span class="mb-3 fs-2">« La nuit porte...la nuit porte...la nuit porte de garage »</span>
+                        </blockquote>
+                        
+                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
+                            Capitaine Charles Patenaude, <cite title="Épisode">S3E1</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="carte col-8 mx-auto">
+                    <figure class="information quote-box pt-4 shadow-sm">
+                        <blockquote class="blockquote mb-0">
+                            <span class="mb-3 fs-2">«- Ark ! J'ai bu du jus de tête !<br>
+                                                    - Bob, ça peut pas vraiment faire de tort...»</span>
+                        </blockquote>
+                        
+                        <figcaption class="titre blockquote-footer quote-author text-end mt-3 mb-0 pt-3">
+                            Bob,Pétrolia, <cite title="Épisode">S1E3</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </fieldset>
+
+        
 
 
     </main>    
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
         <div class=" d-flex align-items-center justify-content-center gap-3">
-            <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#equipage" id="pied-link"> À propos</a></p>
+            <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal" data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-1">
             <p class="pied-page-p">- photos et contenu tirés de la série et films Dans une galaxie près de vous -</p>
         </div>
+
     </footer>
+
+    <div class="modal fade" id="modaleApropos">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-black fs-1">À propos</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-black fs-5">
+                    <p>Site web encyclopédique sur la série Dans une Galaxie près de chez vous</p>
+    
+                    <p><strong>Par :</strong><br>
+                        Rémi Doyle<br>
+                        Marie Laurence Sauvé</p>
+    
+                    <p><strong>Développé dans le cadre du cours :</strong><br>
+                        420-931-MA Programmation Web (Front-End)<br>
+                        gr. 25605 - Été 2026<br>
+                        <strong>Professeur:</strong> Ahmed Imed Eddine Rabah
+                    </p>
+    
+                    <p>Collège de Maisonneuve<br>
+                        LEA.8F Sécurité des applications mobiles, Web et de bureau</p>
+    
+                    <p>Tout image est libre de droit, certaine image sont des <br>
+                        captures d'écrans fait par les dévloppeurs lors de visionnement d'épisode et de films </p>
+    
+                    <p>License unsplash <br>
+                        https://unsplash.com/fr/photos/vue-dartiste-dun-trou-noir-dans-le-ciel-Md5Chaod3Ig</p>
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
     <script src="vendor/bootstrap.bundle.min.js"></script>
 </body>
 </html>
