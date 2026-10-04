@@ -431,6 +431,10 @@ border-radius: 8px;
     width: 45%
 }
 
+.texte-accueil-site {
+    color: var(--gal_primaire_pales);
+}
+
 @media(min-widht: 700px) {
     .entete{
         flex-direction: row;
