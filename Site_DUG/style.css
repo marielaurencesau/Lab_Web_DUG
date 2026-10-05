@@ -28,6 +28,31 @@ Bolder: ( Russo One )
     box-sizing: border-box;
 }
 
+input:user-valid, select:user-valid, textarea:user-valid, .check-input:user-valid{
+   border:3px solid green;
+   background-color: #dadada;
+}
+
+input:user-invalid, select:user-invalid, textarea:user-invalid, .check-input:user-invalid{
+   border:2px solid red;
+   background-color: #dadada;
+}
+input:user-valid + .validation::after, textarea:user-valid + .validation::after { content: "✓"; color: green; }
+input:user-invalid + .validation::after, textarea:user-invalid + .validation::after { content: "x"; color: red; }
+
+.validation{
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 18px;
+  pointer-events: none;
+}
+
+
+
+
 body {
     background-image: url("./images/elements_site/bdrop2.jpg");
     background-repeat: no-repeat;  

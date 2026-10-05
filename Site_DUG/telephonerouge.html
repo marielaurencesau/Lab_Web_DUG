@@ -171,36 +171,40 @@
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="votre-nom">Votre nom :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="votre-nom" name="nom"
                                         placeholder="Ex: Capitaine Patenaude" minlength="2" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="votre-courriel">Votre Courriel :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="email" id="votre-courriel"
                                         name="email" placeholder="nom@romano-fafard.com" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="votre-sujet">Sujet :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="votre-sujet" name="sujet"
                                         placeholder="Ex: Rapport d'anomalie" minlength="4" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <div class="row mb-1 position-relative">
                                 <div class="col-12 text-start">
                                     <label class="form-label mt-2" for="votre-message">Votre message :</label>
                                 </div>
                                 <div class="col-12">
                                     <textarea id="votre-message" name="message" class="form-control rounded-5" rows="5"
                                         placeholder="Écrivez votre téléfax ici..." minlength="15" required></textarea>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="text-center mt-4 mb-4">
@@ -215,16 +219,16 @@
                     <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-8 mx-auto"
                         id="formulaire-ajout">
 
-                        <fieldset class="mb-1 d-flex justify-content-center gap-3">
+                        <fieldset class="mb-1 d-flex justify-content-center gap-3 ">
                             <div class="form-check form-check-inline ">
                                 <input class="form-check-input" type="radio" id="ajout" name="ajout/modif"
-                                    value="ajout">
+                                    value="ajout" required>
                                 <label class="form-check-label" for="ajout">Ajouter</label>
                             </div>
 
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" id="modifier" name="ajout/modif"
-                                    value="modifier">
+                                    value="modifier" required>
                                 <label class="form-check-label" for="modifier">Modification</label>
                             </div>
                         </fieldset>
@@ -234,35 +238,38 @@
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="ajout-nom">Votre nom :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="ajout-nom" name="nom"
                                         placeholder="Ex: Capitaine Patenaude" minlength="2" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="ajout-courriel">Votre Courriel :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="email" id="ajout-courriel"
                                         name="email" placeholder="nom@romano-fafard.com" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="ajout-sujet">Sujet :</label>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-7 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="ajout-sujet" name="sujet"
                                         placeholder="Ex: Rapport d'anomalie" minlength="4" required>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="section">Section : </label>
                                 </div>
-                                <div class="col-7">
-                                    <select class="form-select rounded-pill" name="section" id="section">
+                                <div class="col-7 position-relative">
+                                    <select class="form-select rounded-pill" name="section" id="section" required>
                                         <option value=""> Choisissez une section ...</option>
                                         <option value="mission">La Mission</option>
                                         <option value="rencontres">Les rencontres</option>
@@ -273,14 +280,15 @@
                                         <option value="tel_rouge"> Le téléphone rouge</option>
                                         <option value="autre">Autre</option>
                                     </select>
+                                <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
                                 <div class="col-5 text-end">
                                     <label class="form-label m-0" for="reference">Référence : </label>
                                 </div>
-                                <div class="col-7">
-                                    <select class="form-select rounded-pill" name="reference" id="reference">
+                                <div class="col-7 position-relative">
+                                    <select class="form-select rounded-pill" name="reference" id="reference" required>
                                         <option value=""> Choisir saisons / films ...</option>
                                         <option value="s1e1">Saison 1 épisode 1</option>
                                         <option value="s1e2">Saison 1 épisode 2</option>
@@ -351,6 +359,7 @@
                                         <option value="film2">Film 2</option>
                                         <option value="autre2">Autre</option>
                                     </select>
+                                <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -358,10 +367,11 @@
                                     <label class="form-label mt-2" for="votre-ajout">Décrivez l'ajout/changement proposé
                                         :</label>
                                 </div>
-                                <div class="col-12 mt-2">
+                                <div class="col-12 mt-2 position-relative">
                                     <textarea id="votre-ajout" name="ajout" class="form-control rounded-5" rows="5"
                                         placeholder="Écrivez votre ajout/changement ici..." minlength="15"
                                         required></textarea>
+                                    <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="text-center mt-4 mb-4">
