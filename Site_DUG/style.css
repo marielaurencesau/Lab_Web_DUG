@@ -3,7 +3,7 @@
 Bolder: ( Russo One )
 */
 
-
+/*[T1] VARIABLES DE LA CHARTE - définies une fois, utilisées partout*/
 
 :root {
     --gal_primaire_fonce: #282322;
@@ -20,13 +20,15 @@ Bolder: ( Russo One )
     --gal_gris_pale: #909391;
     --gal_rouge_petant: #E23333;
     --gal_rouge_moyen: #AD1C23;
-    --police-titres: 'Russo One', Verdana, sans-serif; 
+    --police-titre: 'Russo One', Verdana, sans-serif; 
     --police-texte: 'Michroma', Verdana, sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
+
+/* [T2] TYPOGRAPHIE */
 
 body {
     background-image: url("./images/elements_site/bdrop2.jpg");
@@ -41,6 +43,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* [T2] TYPOGRAPHIE */
+
+h1, h2, h3 { font-family: var(--police-titre); }
+
 body.body-404 {
     background-image: url("./images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
     background-repeat: no-repeat;  
@@ -129,6 +136,7 @@ form {
     transform: translateY(-12px);
 }
 
+/* [T8] ÉTATS ET TRANSITIONS - hover */
 .boite-item-nav:hover .nav-bar-texte {
     opacity: 1;
     visibility: visible;
@@ -140,10 +148,7 @@ form {
     border-radius: 8px;
 }
 
-/*.boite-item-nav.page-active .nav-bar-texte{
-    opacity: 1;
-    visibility: visible;
-}*/
+/* [T3] SÉLECTEURS - descendant */
 
 .boite-item-nav.page-active .nav-bar-texte p {
 background-color: var(--gal_bg_surligne_50);
@@ -157,6 +162,8 @@ border-radius: 8px;
 .menu-deroulant {
     font-size: 20px;
 }
+
+/* [T3] SÉLECTEURS - descendant, état*/
 
 .menu-deroulant a:hover {
     background-color: var(--gal_bg_surligne);
@@ -172,11 +179,11 @@ border-radius: 8px;
     
 }
 
+.lien-a-propos {
+    cursor: pointer;
+}
 
-/*.container{
-    display: flex;
-    flex-direction: column;
-}*/
+/* [T4] MODÈLE DE BOÎTE */
 
 .carte{
     background-color:var(--gal_bg_pale_75) ;
@@ -188,7 +195,7 @@ border-radius: 8px;
     padding: 15px 30px;
     margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-
+    cursor: pointer;
 
 }
 .image_equipage{
@@ -246,6 +253,7 @@ border-radius: 8px;
 
 .pied-page-p {
     font-size: 13px;
+    text-align: center;
 }
 
 .carte-bouton {
@@ -279,6 +287,8 @@ border-radius: 8px;
     align-items: center;
     justify-content: center;
 }
+
+/* [T6] GRID */
 .modale-boite{
     position: relative;
     background-color: var(--gal_primaire_pales);
@@ -410,6 +420,8 @@ border-radius: 8px;
     grid-template-columns: 250px 1fr;
 }
 
+/* [T10] TABLEAU STYLÉ */
+
 .tableau-episodes thead tr th {
     background-color: var(--gal_bg_surligne);
     color: var(--gal_primaire_pales);
@@ -443,6 +455,15 @@ border-radius: 8px;
 .texte-accueil-site {
     color: var(--gal_primaire_pales);
 }
+
+/* [T3] SÉLECTEURS - descendant, état, structurel */
+
+.texte-accueil-site ul li:nth-child(even) {
+   color: var(--gal_gris_pale);
+}
+
+/* [T9] PERSONNALISER BOOTSTRAP - prend priorité car le css est lu après le bootstrap
+Et aucune des classe Bootstrap n'impose son style en dur  */
 
 .carte-personnage {
     width: 280px; 
@@ -497,12 +518,19 @@ border-radius: 8px;
     color: var(--gal_primaire_fonce);
 }
 
+/* [T7] MEDIA QUERY - le pied de page passe en une colonne */
 
-
-@media(min-widht: 700px) {
+@media(min-width: 700px) {
     .entete{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .pied-page-premier {
+        flex-direction: column;
         align-items: center;
     }
 }
