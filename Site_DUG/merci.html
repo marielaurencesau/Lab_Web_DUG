@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Proposition reçue — Ma ludothèque</title>
     <meta name="description" content="Confirmation d'envoi d'une proposition de jeu.">
+    <title>Proposition reçue — Ma ludothèque</title>
+    
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -135,7 +135,7 @@
                         <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
                         <li><a class="dropdown-item" href="citations.html">Citations</a></li>
                         <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
-                        <li><a class="dropdown-item" href="épisodes.html">Les épisodes</a></li>
+                        <li><a class="dropdown-item" href="episodes.html">Les épisodes</a></li>
                         <!--page vaisseau masquée pour le moment-->
                         <li class="d-none"><a class="dropdown-item" href="vaisseau.html">Le vaisseau</a></li>
                     </ul>
@@ -146,8 +146,8 @@
 
 
     <main class="flex-grow-1">
-        <div class="page-chapeau container d-flex justify-content-center align-items-center mb-5 ">
-            <h1 class="fw-bold mb-3">Proposition reçue</h1>
+        <div class="page-chapeau container d-flex flex-column align-items-center mb-5 mt-5 ">
+            <h2 class="fw-bold h1 mb-3">Proposition reçue</h2>
             <p class="display-1 mb-3" aria-hidden="true">✓</p>
             <p class=" fs-3 mb-4 col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
                 Merci ! Gervais analysera votre demande et nous transmettra ses recommandations !
@@ -162,8 +162,15 @@
 
 
     <footer class="pied-page container-fluid pt-3 pb-1 mt-5">
-        <div class=" d-flex flex-wrap align-items-center justify-content-center gap-3">
-            <p class="my-auto">Tous droits réservés</p>  -  <p class="my-auto">@ Doyle-Sauvé-2026</p>  -  <p class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal" data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
+        <div class="pied-page-premier d-flex align-items-center justify-content-center gap-3">
+            <p class="my-auto">Tous droits réservés</p>
+            <p class="my-auto">@ Doyle-Sauvé-2026</p>
+            <p class="my-auto">
+                <a class="text-decoration-none lien-a-propos" href="#modaleApropos" data-bs-toggle="modal"
+                    data-bs-target="#modaleApropos" id="pied-link"> 
+                    À propos
+                </a>
+            </p>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-1">
             <p class="pied-page-p">- photos et contenu tirés de la série et films Dans une galaxie près de vous -</p>

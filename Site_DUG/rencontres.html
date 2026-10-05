@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="répertoire des personnages rencontrés durant le voyage">
     <title>Les rencontres</title>
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
@@ -132,7 +133,7 @@
                         <li><a class="dropdown-item menu-item-actif" href="rencontres.html">Les rencontres</a></li>
                         <li><a class="dropdown-item" href="citations.html">Citations</a></li>
                         <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
-                        <li><a class="dropdown-item" href="épisodes.html">Les épisodes</a></li>
+                        <li><a class="dropdown-item" href="episodes.html">Les épisodes</a></li>
                         <!--page vaisseau masquée pour le moment-->
                         <li class="d-none"><a class="dropdown-item" href="vaisseau.html">Le vaisseau</a></li>
                     </ul>
@@ -149,8 +150,8 @@
         <!------- galerie ------->
         <div class="container d-flex flex-wrap justify-content-center">
             <!------- carte créature  ------->
-            <div class="card m-2 rounded-4 carte-personnage" type="button" data-bs-toggle="modal"
-                data-bs-target="#detailcreature1">
+            <div type="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
+                data-bs-target="#detailperso1">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
                         <img class="card-image-top p-3 " src="images/personnages/huitieme_passager.png"
@@ -172,7 +173,8 @@
                 </div>
             </div>
             <!------- carte Trétiak  ------->
-            <div class="card m-2 rounded-4 carte-personnage">
+            <div type="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
+                data-bs-target="#detailperso2">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
                         <img class="card-image-top p-3" src="images/personnages/tretiak.jpg" alt="monstre vert">
@@ -184,7 +186,7 @@
                         </div>
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
                             <h2 class="carte-perso-libele fs-5">Espèce :</h2>
-                            <p class="carte-perso-valeur fs-6">Sage</p>
+                            <p class="carte-perso-valeur fs-6">Mage</p>
                         </div>
                         <div class="p-0 w-100 text-center">
                             <h3><span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span></h3>
@@ -198,10 +200,15 @@
 
     </main>
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
-        <div class=" d-flex align-items-center justify-content-center gap-3">
-            <p class="my-auto">Tous droits réservés</p> - <p class="my-auto">@ Doyle-Sauvé-2026</p> - <p
-                class="my-auto"><a class="text-decoration-none" href="#modaleApropos" data-bs-toggle="modal"
-                    data-bs-target="#modaleApropos" id="pied-link" style="cursor: pointer;"> À propos</a></p>
+        <div class="pied-page-premier d-flex align-items-center justify-content-center gap-5">
+            <p class="my-auto">Tous droits réservés</p>
+            <p class="my-auto">@ Doyle-Sauvé-2026</p>
+            <p class="my-auto">
+                <a class="text-decoration-none lien-a-propos" href="#modaleApropos" data-bs-toggle="modal"
+                    data-bs-target="#modaleApropos" id="pied-link"> 
+                    À propos
+                </a>
+            </p>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-1">
             <p class="pied-page-p">- photos et contenu tirés de la série et films Dans une galaxie près de vous -</p>
@@ -209,32 +216,142 @@
 
     </footer>
 
-    <div class="modal fade" id="detailcreature1" tabindex="-1" aria-labelledby="modalcreaturelabel1" aria-hidden="true">
-        <div class="modal-dialog modal-md modal-dialog-centered">
-            <div class="modal-content">
+    <div class="modal fade" id="detailperso1" tabindex="-1" aria-labelledby="modalpersolabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+            <div class="modal-content modale-perso">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalcreaturelabel1">Détails de la créature</h5>
+                    <h5 class="modal-title modal-perso-titre" id="modalpersolabel1">La créature</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex flex-column md-flex-row">
-                        <div class="border-0 rounded-3 modale-perso-image-boite col-md-6">
-                            <img class="modale-perso-image rounded p-2" src="images/personnages/huitieme_passager.png"
-                                alt="monstre vert">
+                    <div class="modale-perso-top">
+                        <div
+                            class="d-flex flex-column flex-shrink-0 gap-3 flex-md-row align-items-center align-items-md-start">
+                            <div class="col-md-6">
+                                <img class="modale-perso-image rounded p-2"
+                                    src="images/personnages/huitieme_passager.png" alt="monstre vert">
+                            </div>
+                            <div class="d-flex flex-column gap-1 w-100 align-items-center align-items-md-start">
+                                <div class="px-0 d-flex gap-2 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Nom :</h2>
+                                    <p class="carte-perso-valeur fs-6">La créature</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Espèce :</h2>
+                                    <p class="carte-perso-valeur fs-6">Organisme</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Planète :</h2>
+                                    <p class="carte-perso-valeur fs-6">Acné-7</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Référence :</h2>
+                                    <p class="carte-perso-valeur fs-6">S1E5</p>
+                                </div>
+                                <div class="p-0 w-100 text-center text-center text-md-start">
+                                    <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span>
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex flex-column gap-3">
-                            <div class="px-0 d-flex gap-2 flex-column align-items-start">
-                                <h2 class="carte-perso-libele fs-5">Nom :</h2>
-                                <p class="carte-perso-valeur fs-6">La créature</p>
+                    </div>
+                    <div class="modale-perso-bottom mt-5">
+                        <div class="px-0 d-flex gap-2 flex-column align-items-start">
+                            <h2 class="carte-perso-libele fs-5">Description :</h2>
+                            <p class="carte-perso-valeur fs-6">
+                                Organisme vivant provenant d'un cocon ramassé sur Acné-7, une planète où la température
+                                est à -67 degrés celsius.
+                                Dans son habitat naturel, l'organisme était gelé. Au contact de la chaleur du vaisseau,
+                                l'organisme a repris vie
+                                <br><br> La femelle qui a pondu ce cocon s'appelait Zmulik, ce qui veut dire en français
+                                , Nicole. Son mari, Spolak,
+                                était facteur. et buvait comme un trou.
+                                <br><br> La chose est difforme et laide, indétectable par les radars internes et n'a pas
+                                de poil.
+                                Les armes ne lui font aucun effet. Pour la sortir du vaisseau, il a fallu la recongeler,
+                                donc couper le chauffage et
+                                les moteurs du vaisseau jusqua ce que la temperature atteigne le point de concelation
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nav-modale">
+                        <button 
+                            type="button" 
+                            data-bs-dismiss="modal" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#detailperso2" 
+                            class="btn-nav">
+                            Précédent
+                        </button>
+                        <button 
+                            type="button" 
+                            data-bs-dismiss="modal" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#detailperso2" 
+                            class="btn-nav">
+                            Suivant
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailperso2" tabindex="-1" aria-labelledby="modalpersolabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+            <div class="modal-content modale-perso">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-perso-titre" id="modalpersolabel2">Trétiak</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modale-perso-top">
+                        <div
+                            class="d-flex flex-column flex-shrink-0 gap-3 flex-md-row align-items-center align-items-md-start">
+                            <div class="col-md-6">
+                                <img class="modale-perso-image rounded p-2"
+                                    src="images/personnages/tretiak.jpg" alt="Trétiak">
                             </div>
-                            <div class="px-0 d-flex gap-2 flex-column align-items-start">
-                                <h2 class="carte-perso-libele fs-5">Espèce :</h2>
-                                <p class="carte-perso-valeur fs-6">Organisme</p>
-                            </div>
-                            <div class="p-0 w-100 text-center">
-                                <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
+                            <div class="d-flex flex-column gap-1 w-100 align-items-center align-items-md-start">
+                                <div class="px-0 d-flex gap-2 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Nom :</h2>
+                                    <p class="carte-perso-valeur fs-6">Trétiak</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Espèce :</h2>
+                                    <p class="carte-perso-valeur fs-6">Mage</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Planète :</h2>
+                                    <p class="carte-perso-valeur fs-6">Inconnue</p>
+                                </div>
+                                <div class="px-0 d-flex gap-1 flex-column align-items-center align-items-md-start">
+                                    <h2 class="carte-perso-libele fs-5">Référence :</h2>
+                                    <p class="carte-perso-valeur fs-6">S3E1</p>
+                                </div>
+                                <div class="p-0 w-100 text-center text-center text-md-start">
+                                    <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span>
+                                    </h3>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="modale-perso-bottom mt-5">
+                        <div class="px-0 d-flex gap-2 flex-column align-items-start">
+                            <h2 class="carte-perso-libele fs-5">Description :</h2>
+                            <p class="carte-perso-valeur fs-6">
+                                Trétiak est un mage qui a recueilli le Capitaine Patenaude sur sa planète pour lui
+                                permettre de se remettre de remettre d'un épisode dépressif.
+                                <br><br>
+                                Ce grand sage pacifique offre au Capitaine, avec Bob, Flavien, Pétrolia, Valence et Serge de 
+                                s'installer sur sa petite planète et de rebâtir l'humanité. Il révoque cette offre
+                                lorsque la chicane pogne et qu'il réalise que ces humains sont trop... humains!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nav-modale">
+                        <button data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#detailperso1" class="btn-nav">Précédent</button>
+                        <button data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#detailperso1" class="btn-nav">Suivant</button>
                     </div>
                 </div>
             </div>
