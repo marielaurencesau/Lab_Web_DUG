@@ -26,7 +26,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-center pe-1  pe-xl-5">
                 <!--------navigation-étendu-------->
-                <div class="d-none d-m-flex d-lg-flex gap-5">
+                <div class="d-none d-md-flex d-lg-flex gap-5">
 
                     <!--------piton Mission-------->
                     <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
@@ -123,7 +123,7 @@
                 <!--------menu déroulant-------->
                 <!--------bouton-menu-------->
                 <div class="btn-group">
-                    <button type="button" class="btn d-lg-none d-m-none" data-bs-toggle="dropdown"
+                    <button type="button" class="btn d-lg-none d-md-none" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-rocket h1 icone-menu-deroulant"></i>
                     </button>
@@ -145,18 +145,18 @@
 
     <main>
         <div class="page-chapeau container d-flex justify-content-center align-items-center ">
-            <p class=" fs-3 mt-4 mb-4 w-75 text-center">
+            <p class=" fs-5 fs-md-3 mt-4 mb-4 w-100 w-md-75 text-center">
                 Bonjour et bienvenue au service d'assistance du Romano Fafard.
                 Vous avez 3 options. Pour un déménagement ou un changement d'adresse de
                 station orbitale, appuyez sur 1.
-                <br>Pour nous téléfaxer votre avis ou nous informer d'une erreur ou d'une
+                <br><br class="d-none dmd-blcok">Pour nous téléfaxer votre avis ou nous informer d'une erreur ou d'une
                 information non répertoriée, utilisez ce formulaire.
             </p>
         </div>
         <div class="container-telehpone text-center" id="container-telehpone">
             <div class="row align-items-start justify-content-center">
                 <div class="col-12 col-md-8 mx-auto text-center">
-                    <div class="d-flex flex-row gap-3 mt-5 mb-5 justify-content-center w-100">
+                    <div class="d-flex flex-column flex-md-row gap-3 mt-5 mb-5 justify-content-center align-items-md-center w-100">
                         <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
                             href="#formulaire-telefaxe">Téléfaxer un message</a>
                         <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
@@ -164,35 +164,35 @@
                     </div>
 
 
-
-                    <form action="merci.html" method="get" class="formulaire-telefaxe mt-4 col-12 col-md-8 mx-auto"
+                    <!--Premier formulaire-->
+                    <form action="merci.html" method="get" class="formulaire-telefaxe mt-4 col-12 col-md-10 col-lg-8 mx-auto"
                         id="formulaire-telefaxe">
                         <fieldset>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
-                                    <label class="form-label m-0" for="votre-nom">Votre nom :</label>
+                                <div class="col-12 col-md-4 text-end">
+                                    <label class="form-label m-0 fs-4" for="votre-nom">Nom :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="votre-nom" name="nom"
                                         placeholder="Ex: Capitaine Patenaude" minlength="2" required>
                                     <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
-                                    <label class="form-label m-0" for="votre-courriel">Votre Courriel :</label>
+                                <div class="col-12 col-md-4 text-end">
+                                    <label class="form-label m-0" for="votre-courriel fs-6">Courriel :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="email" id="votre-courriel"
                                         name="email" placeholder="nom@romano-fafard.com" required>
                                     <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
+                                <div class="col-12 col-md-4 text-end">
                                     <label class="form-label m-0" for="votre-sujet">Sujet :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="votre-sujet" name="sujet"
                                         placeholder="Ex: Rapport d'anomalie" minlength="4" required>
                                     <span class="validation"></span>
@@ -209,15 +209,15 @@
                                 </div>
                             </div>
                             <div class="text-center mt-4 mb-4">
-                                <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold" type="submit">Activer
+                                <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold py-3 py-md-2" type="submit" style="min-height: 45px;">Activer
                                     le
                                     Téléfax</button>
                             </div>
                         </fieldset>
                     </form>
 
-
-                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-8 mx-auto"
+                    <!--Deuxieme formulaire-->
+                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-10 col-lg-8 mx-auto"
                         id="formulaire-ajout">
 
                         <fieldset class="mb-1 d-flex justify-content-center gap-3 ">
@@ -236,40 +236,40 @@
 
                         <fieldset>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
-                                    <label class="form-label m-0" for="ajout-nom">Votre nom :</label>
+                                <div class="col-12 col-md-4 text-end">
+                                    <label class="form-label m-0" for="ajout-nom">Nom :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="ajout-nom" name="nom"
                                         placeholder="Ex: Capitaine Patenaude" minlength="2" required>
                                     <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
-                                    <label class="form-label m-0" for="ajout-courriel">Votre Courriel :</label>
+                                <div class="col-12 col-md-4 text-end">
+                                    <label class="form-label m-0" for="ajout-courriel">Courriel :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="email" id="ajout-courriel"
                                         name="email" placeholder="nom@romano-fafard.com" required>
                                     <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
+                                <div class="col-12 col-md-4 text-end">
                                     <label class="form-label m-0" for="ajout-sujet">Sujet :</label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <input class="form-control rounded-pill" type="text" id="ajout-sujet" name="sujet"
                                         placeholder="Ex: Rapport d'anomalie" minlength="4" required>
                                     <span class="validation"></span>
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
+                                <div class="col-12 col-md-4 text-end">
                                     <label class="form-label m-0" for="section">Section : </label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <select class="form-select rounded-pill" name="section" id="section" required>
                                         <option value=""> Choisissez une section ...</option>
                                         <option value="mission">La Mission</option>
@@ -285,10 +285,10 @@
                                 </div>
                             </div>
                             <div class="row align-items-center mb-1">
-                                <div class="col-5 text-end">
+                                <div class="col-12 col-md-4 text-end">
                                     <label class="form-label m-0" for="reference">Référence : </label>
                                 </div>
-                                <div class="col-7 position-relative">
+                                <div class="col-12 col-md-8 position-relative">
                                     <select class="form-select rounded-pill" name="reference" id="reference" required>
                                         <option value=""> Choisir saisons / films ...</option>
                                         <option value="s1e1">Saison 1 épisode 1</option>
@@ -376,7 +376,7 @@
                                 </div>
                             </div>
                             <div class="text-center mt-4 mb-4">
-                                <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold" type="submit">Activer
+                                <button class="btn-tel btn-lg text-dark rounded-pill px-5 fw-bold py-3 py-md-2" type="submit" style="min-height: 45px;">Activer
                                     le
                                     Téléfax</button>
                             </div>
@@ -386,7 +386,7 @@
             </div>
         </div>
     </main>
-
+    <!--Pied de page-->
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
         <div class="pied-page-premier d-flex align-items-center justify-content-center gap-3">
             <p class="my-auto">Tous droits réservés</p>
