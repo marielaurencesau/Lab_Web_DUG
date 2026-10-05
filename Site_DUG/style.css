@@ -27,6 +27,9 @@ Bolder: ( Russo One )
 * {
     box-sizing: border-box;
 }
+
+/* [T2] TYPOGRAPHIE */
+
 input:user-valid, select:user-valid, textarea:user-valid, .check-input:user-valid{
    border:3px solid green;
    background-color: #dadada;
@@ -50,6 +53,9 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
 }
 
 
+
+
+/* [T2] TYPOGRAPHIE */
 
 
 /* [T2] TYPOGRAPHIE */
