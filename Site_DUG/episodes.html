@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les rencontres</title>
+    <title>Les épisodes</title>
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -21,7 +21,7 @@
                 <a class="d-flex" href="index.html">
                     <img class="entete-icone" src="./images/icones/Romano-Fafard_10.png" alt="icone vaisseau">
                 </a>
-                <h1 class="banniere-titre text-m-nowrap">Les rencontres</h1>
+                <h1 class="banniere-titre text-m-nowrap">Les épisodes</h1>
             </div>
             <div class="d-flex align-items-center justify-content-center pe-1  pe-xl-5">
                 <!--------navigation-étendu-------->
@@ -29,7 +29,7 @@
 
                     <!--------piton Mission-------->
                     <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
-                        <a href="index.html" class="nav-bar-lien w-100">
+                        <a href="index.html" aria-current="page" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center ">
                                 <img class="nav-bar-icon" src="images/icones/terre.png" alt="La Mission">
                             </div>
@@ -61,8 +61,8 @@
                         </a>
                     </div>
                     <!--------piton rencontres-------->
-                    <div class="boite-item-nav page-active d-flex flex-column align-items-center position-relative">
-                        <a href="rencontres.html" aria-current="page" class="nav-bar-lien w-100">
+                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
+                        <a href="rencontres.html" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center">
                                 <img class="nav-bar-icon" src="images/icones/alien.png" alt="rencontres">
                             </div>
@@ -95,8 +95,8 @@
                         </a>
                     </div>
                     <!--------les épisodes-------->
-                    <div class="boite-item-nav d-flex flex-column align-items-center position-relative">
-                        <a href="episodes.html" class="nav-bar-lien w-100">
+                    <div class="boite-item-nav page-active d-flex flex-column align-items-center position-relative">
+                        <a href="episodes.html" aria-current="page" class="nav-bar-lien w-100">
                             <div class="nav-bar-icon-bloc d-flex justify-content-center">
                                 <img class="nav-bar-icon" src="images/icones/logo_icone.png" alt="telephone rouge">
                             </div>
@@ -129,10 +129,10 @@
                         <li><a class="dropdown-item" href="index.html">La Mission</a></li>
                         <li><a class="dropdown-item" href="equipage.html">L'équipage</a></li>
                         <li><a class="dropdown-item" href="voyage.html">Le voyage</a></li>
-                        <li><a class="dropdown-item menu-item-actif" href="rencontres.html">Les rencontres</a></li>
+                        <li><a class="dropdown-item" href="rencontres.html">Les rencontres</a></li>
                         <li><a class="dropdown-item" href="citations.html">Citations</a></li>
                         <li><a class="dropdown-item" href="telephonerouge.html">Le téléphone rouge</a></li>
-                        <li><a class="dropdown-item" href="épisodes.html">Les épisodes</a></li>
+                        <li><a class="dropdown-item menu-item-actif" href="épisodes.html">Les épisodes</a></li>
                         <!--page vaisseau masquée pour le moment-->
                         <li class="d-none"><a class="dropdown-item" href="vaisseau.html">Le vaisseau</a></li>
                     </ul>
@@ -141,60 +141,119 @@
         </div>
     </header>
     <main>
+        <!--------chapeau-------->
         <div class="page-chapeau container d-flex justify-content-center align-items-center ">
-            <p class=" fs-3 mt-4 mb-4  w-75 text-center">
-                Vous trouverez ici un répertoire des différents individus rencontrés au cours du voyage du Romano Fafard
+            <p class=" fs-3 mt-4 mb-4 w-75 text-center">
+                Vous trouverez ici la description de toutes les archives vidéo documentant les événements du voyage du
+                Romano Fafard.
+                <br>
+                <span class="fs-5">(En d'autres mots, voici la liste des épisodes...)</span>
             </p>
         </div>
-        <!------- galerie ------->
-        <div class="container d-flex flex-wrap justify-content-center">
-            <!------- carte créature  ------->
-            <div class="card m-2 rounded-4 carte-personnage">
-                <div class="card-body d-flex flex-column">
-                    <div class="card border-0 rounded-3 carte-perso-image">
-                        <img class="card-image-top p-3" src="images/personnages/huitieme_passager.png"
-                            alt="monstre vert">
-                    </div>
-                    <div class="mt-3 carte-perso-info">
-                        <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Nom :</h2>
-                            <p class="carte-perso-valeur fs-6">La créature</p>
-                        </div>
-                        <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Espèce :</h2>
-                            <p class="carte-perso-valeur fs-6">Organisme</p>
-                        </div>
-                        <div class="p-0 w-100 text-center">
-                            <h3 ><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!------- carte Trétiak  ------->
-            <div class="card m-2 rounded-4 carte-personnage">
-                <div class="card-body d-flex flex-column">
-                    <div class="card border-0 rounded-3 carte-perso-image">
-                        <img class="card-image-top p-3" src="images/personnages/tretiak.jpg"
-                            alt="monstre vert">
-                    </div>
-                    <div class="mt-3 carte-perso-info">
-                        <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Nom :</h2>
-                            <p class="carte-perso-valeur fs-6">Trétiak</p>
-                        </div>
-                        <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Espèce :</h2>
-                            <p class="carte-perso-valeur fs-6">Sage</p>
-                        </div>
-                        <div class="p-0 w-100 text-center">
-                            <h3 ><span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
+        <!--------tableau-------->
+        <div class="w-75 m-auto mt-4">
+
+            <h2 class="h2 mb-3">La télésérie</h2>
+
+            <div class="conteneur-table rounded-3 overflow-hidden border mb-4">
+                <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                    <thead class="fs-5">
+                        <tr class="ligne-table-titre">
+                            <th colspan="4" class="text-center">Saison 1</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="colonne1">N° épisode</th>
+                            <th scope="col" class="colonne2">Titre</th>
+                            <th scope="col" class="colonne3">Diffusion originale</th>
+                            <th scope="col" class="colonne4">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fs-6">
+                        <tr>
+                            <td>1</td>
+                            <td>Attendez-nous pas pour souper!</td>
+                            <td>1999-01-25</td>
+                            <td>Après six mois de recherche infructueuse d'une planète habitable, l'équipage doit aller explorer plus loin dans l'espace. Ceci implique qu'ils ne seront plus en mesure de communiquer avec la Terre, à la grande crainte de Brad.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob, bu</td>
+                            <td>1999-01-25</td>
+                            <td>Bob se fait accidentellement déshydrater lorsqu'on a besoin de lui pour entrer dans l'orbite d'une planète.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tout feu tout flamme</td>
+                            <td>1999-02-01</td>
+                            <td>Le capitaine et Valence n'arrivent plus à se cacher leur amour.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Le secret</td>
+                            <td>1999-02-15</td>
+                            <td>Brad ne compte pas laisser le capitaine et Valence entretenir leurs nouveaux liens.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Le huitième passager</td>
+                            <td>1999-02-22</td>
+                            <td>Brad affirme avoir vu une créature extra-terrestre dans le vaisseau, mais le reste de l'équipage ne le croit pas.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Le réveil de Flavien</td>
+                            <td>1999-03-01</td>
+                            <td>Flavien se fait sortir de régénérescence après que l'électricité ait été coupée, ce qui pourrait lui être fatal.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>La liste</td>
+                            <td>1999-03-08</td>
+                            <td>Brad omet de dire à Falbo qu'un exercice de défense va être tenu. Falbo se retrouve ainsi convaincu que des extraterrestres ont envahi le vaisseau.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>La course contre la montre</td>
+                            <td>1999-03-15</td>
+                            <td>Le capitaine Patenaude est atteint d'une crise d'appendicite. Mirabella, avec l'aide de Valence, tente de l'opérer. Durant ce temps, Brad prend le commandement du vaisseau. Ayant repéré une planète qui semble prometteuse, il exige à Bob et à Flavien de se dépêcher de l'atteindre avant que le capitaine ne puisse reprendre son poste, pour être celui ayant accompli la mission.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Le virus</td>
+                            <td>1999-03-22</td>
+                            <td>Brad donne un virus à Gervais et Bob enclenche l'auto-destruction du vaisseau pendant qu'il est somnambule.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Tou-tou-tou-touuut!</td>
+                            <td>1999-03-29</td>
+                            <td>L'équipage se met à entendre des sons inconnus provenant d'extra-terrestres.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Le procès</td>
+                            <td>1999-04-05</td>
+                            <td>Brad est en procès pour avoir faussé les rapports de sonde.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Le verglas</td>
+                            <td>1999-04-12</td>
+                            <td>Le Romano Fafard est emprisonné sous une immense couche de verglas.</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Capitaine d'un jour</td>
+                            <td>1999-04-19</td>
+                            <td>Flavien, Brad et Bob doivent remporter un défi pour gagner la chance d'être capitaine d'un jour.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
 
     </main>
     <footer class="pied-page container-fluid pt-3 pb-1 mt-auto">
