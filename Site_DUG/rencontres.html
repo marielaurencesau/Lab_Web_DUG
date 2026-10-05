@@ -149,10 +149,11 @@
         <!------- galerie ------->
         <div class="container d-flex flex-wrap justify-content-center">
             <!------- carte créature  ------->
-            <div class="card m-2 rounded-4 carte-personnage">
+            <div class="card m-2 rounded-4 carte-personnage" type="button" data-bs-toggle="modal"
+                data-bs-target="#detailcreature1">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
-                        <img class="card-image-top p-3" src="images/personnages/huitieme_passager.png"
+                        <img class="card-image-top p-3 " src="images/personnages/huitieme_passager.png"
                             alt="monstre vert">
                     </div>
                     <div class="mt-3 carte-perso-info">
@@ -165,7 +166,7 @@
                             <p class="carte-perso-valeur fs-6">Organisme</p>
                         </div>
                         <div class="p-0 w-100 text-center">
-                            <h3 ><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
+                            <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
                         </div>
                     </div>
                 </div>
@@ -174,8 +175,7 @@
             <div class="card m-2 rounded-4 carte-personnage">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
-                        <img class="card-image-top p-3" src="images/personnages/tretiak.jpg"
-                            alt="monstre vert">
+                        <img class="card-image-top p-3" src="images/personnages/tretiak.jpg" alt="monstre vert">
                     </div>
                     <div class="mt-3 carte-perso-info">
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
@@ -187,7 +187,7 @@
                             <p class="carte-perso-valeur fs-6">Sage</p>
                         </div>
                         <div class="p-0 w-100 text-center">
-                            <h3 ><span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span></h3>
+                            <h3><span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span></h3>
                         </div>
                     </div>
                 </div>
@@ -208,6 +208,38 @@
         </div>
 
     </footer>
+
+    <div class="modal fade" id="detailcreature1" tabindex="-1" aria-labelledby="modalcreaturelabel1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalcreaturelabel1">Détails de la créature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column md-flex-row">
+                        <div class="border-0 rounded-3 modale-perso-image-boite col-md-6">
+                            <img class="modale-perso-image rounded p-2" src="images/personnages/huitieme_passager.png"
+                                alt="monstre vert">
+                        </div>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="px-0 d-flex gap-2 flex-column align-items-start">
+                                <h2 class="carte-perso-libele fs-5">Nom :</h2>
+                                <p class="carte-perso-valeur fs-6">La créature</p>
+                            </div>
+                            <div class="px-0 d-flex gap-2 flex-column align-items-start">
+                                <h2 class="carte-perso-libele fs-5">Espèce :</h2>
+                                <p class="carte-perso-valeur fs-6">Organisme</p>
+                            </div>
+                            <div class="p-0 w-100 text-center">
+                                <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="modaleApropos">
         <div class="modal-dialog modal-lg">

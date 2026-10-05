@@ -452,6 +452,10 @@ border-radius: 8px;
 .carte-perso-image {
     background-color: var(--gal_bg_surligne);
 }
+
+.carte-perso-image img {
+    max-height: 250px;       
+}
 .carte-perso-libele{
     color: var(--gal_second_rouge);
 }
@@ -468,6 +472,12 @@ border-radius: 8px;
 .carte-perso-badge-amical {
     background-color: var(--gal_second_bleu);
     color: var(--gal_gris_pale);
+}
+
+.modale-perso-image {
+    width: 250px;
+    max-height: 280px;
+
 }
 
 @media(min-widht: 700px) {
