@@ -448,7 +448,16 @@ border-radius: 8px;
     width: 280px; 
     min-width: 230px;
     background-color: var(--gal_bg_pale_75);
+    box-shadow: 0 1PX 4PX var(--gal_bg_surligne); 
+    transition: .25s;
 }
+
+.carte-personnage:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 8px var(--gal_bg_surligne);
+    transition: .25s; 
+}
+
 .carte-perso-image {
     background-color: var(--gal_bg_surligne);
 }
@@ -474,11 +483,21 @@ border-radius: 8px;
     color: var(--gal_gris_pale);
 }
 
-.modale-perso-image {
-    width: 250px;
-    max-height: 280px;
-
+.modale-perso {
+    background-color: var(--gal_gris_pale);
 }
+
+.modale-perso-image {
+    width: 233px;
+    max-width: 100%;
+    background-color: var(--gal_bg_surligne);
+}
+
+.modal-perso-titre{
+    color: var(--gal_primaire_fonce);
+}
+
+
 
 @media(min-widht: 700px) {
     .entete{
