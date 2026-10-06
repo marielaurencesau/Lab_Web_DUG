@@ -159,6 +159,10 @@ body.body-404 {
     
 }
 
+.banniere-titre.long-titre {
+    font-size: clamp(1.50rem, 3vw, 3.5rem)
+}
+
 .entete-icone{
     margin: auto;
     height: clamp(40px, 4vw, 90px); 
@@ -274,7 +278,7 @@ border-radius: 8px;
 
 .pied-page{
     background-color: var(--gal_bg_entetes_75);
-    font-family: 'Michroma', sans-serif;
+    font-family: var(--police-texte);
     font-size: 16px;
     color: var(--gal_primaire_pales);
 }
@@ -312,7 +316,7 @@ border-radius: 8px;
     justify-content: space-between;
     padding: 15px 30px;
     margin: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px var(--gal_bg_surligne);
     cursor: pointer;
 }
 /* [T4] MODÈLE DE BOÎTE */
@@ -517,10 +521,9 @@ border-radius: 8px;
 
 
 .structure-carte {
-    display: grid !important; 
+    display: grid;
     grid-template-columns: 250px 1fr;
 }
-
 
 /*-----------Page rencontres-------------*/
 .carte-personnage {
