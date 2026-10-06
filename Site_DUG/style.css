@@ -56,10 +56,12 @@
     .pied-page-premier
 
 [T8] ÉTATS ET TRANSITIONS - Les items de la barre de navigation qui se levent et le texte qui apparait quand on survole  
-.boite-item-nav:hover .nav-bar-texte
+    .boite-item-nav:hover .nav-bar-texte
 
-[T9] PERSONNALISER BOOTSTRAP - 
-
+[T9] PERSONNALISER BOOTSTRAP - Les boutons de sélection des différentes saisons dans la page épisode
+    - Nos propriétés prennent le dessus puisque le css est lu après les propriétés de Bootstrap et 
+      on a modifié directement avec les variables natives CSS de BS (custom properties)
+        .btn.btn-primary 
 
 [T10] TABLEAU STYLÉ
     .tableau-episodes thead tr th
@@ -88,6 +90,7 @@
     --gal_bg_surligne: #648895;
     --gal_bg_surligne_50: rgb(100, 136, 149, 0.5);
     --gal_second_rouge: #6B0E18;
+    
     
     --gal_noir: #010101;
     --gal_gris_pale: #909391;
@@ -586,10 +589,10 @@ form {
 .btn-tel {
     padding: 10px 24px;
     font-size: 15px;
-    background-color: #1a6f8a;
-    border: 2px solid #3ca5c4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(60, 165, 196, 0.5);
+    background-color: var(--gal_second_bleu);
+    border: 2px solid var(--gal_bg_surligne);
+    border-radius: 10px gal;
+    box-shadow: 0 0 10px var(--gal_bg_surligne_50);
     white-space: nowrap;
 }
 
@@ -600,7 +603,7 @@ form {
     transition: all 0.2s ease-in-out;
 }
 
-#container-telephone {
+.container-telephone {
     max-width: 6000px;
     margin: 0 auto; 
 }
@@ -617,12 +620,12 @@ form {
 
 input:user-valid, select:user-valid, textarea:user-valid, .check-input:user-valid{
    border:3px solid green;
-   background-color: #dadada;
+   background-color: var(--gal_primaire_pales);
 }
 
 input:user-invalid, select:user-invalid, textarea:user-invalid, .check-input:user-invalid{
-   border:2px solid red;
-   background-color: #dadada;
+   border:2px solid var(--gal_rouge_petant);
+   background-color: var(--gal_primaire_pales);
 }
 input:user-valid + .validation::after, textarea:user-valid + .validation::after { content: "✓"; color: green; }
 input:user-invalid + .validation::after, textarea:user-invalid + .validation::after { content: "x"; color: red; }
@@ -680,14 +683,30 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
     width: 45%
 }
 
+/* [T9] TABLEAU STYLÉ */
+.btn.btn-primary {
+    --bs-btn-color: var(--gal_primaire_pales);
+    --bs-btn-bg: var(--gal_second_bleu) ;
+    --bs-btn-border-color: var(--gal_bg_surligne);
+    --bs-btn-hover-color: var(--gal_primaire_pales);
+    --bs-btn-hover-bg: var(--gal_bg_surligne_50);
+    --bs-btn-hover-border-color: var(--gal_bg_surligne);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--gal_primaire_pales);
+    --bs-btn-active-bg: var(--gal_bg_surligne);
+    --bs-btn-active-border-color: var(--gal_second_bleu);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-font-family: val(--police-texte) ;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: .5rem;
+}
+
+
 /*@media(min-width: 700px) {
     .entete{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-}*/
-
-/*.lead {
-    color:var(--gal_second_bleu) ;
 }*/
