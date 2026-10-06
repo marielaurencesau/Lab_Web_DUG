@@ -150,7 +150,7 @@
         <!------- galerie ------->
         <div class="container d-flex flex-wrap justify-content-center">
             <!------- carte créature  ------->
-            <div type="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
+            <div role="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
                 data-bs-target="#detailperso1">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
@@ -159,21 +159,21 @@
                     </div>
                     <div class="mt-3 carte-perso-info">
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Nom :</h2>
+                            <span class="carte-perso-libele fs-5">Nom :</span>
                             <p class="carte-perso-valeur fs-6">La créature</p>
                         </div>
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Espèce :</h2>
+                            <span class="carte-perso-libele fs-5">Espèce :</span>
                             <p class="carte-perso-valeur fs-6">Organisme</p>
                         </div>
                         <div class="p-0 w-100 text-center">
-                            <h3><span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span></h3>
+                            <span class="badge px-5 rounded-pill carte-perso-badge-hostile">Hostile</span>
                         </div>
                     </div>
                 </div>
             </div>
             <!------- carte Trétiak  ------->
-            <div type="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
+            <div role="button" class="card m-2 rounded-4 carte-personnage" data-bs-toggle="modal"
                 data-bs-target="#detailperso2">
                 <div class="card-body d-flex flex-column">
                     <div class="card border-0 rounded-3 carte-perso-image">
@@ -181,15 +181,15 @@
                     </div>
                     <div class="mt-3 carte-perso-info">
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Nom :</h2>
+                            <span class="carte-perso-libele fs-5">Nom :</span>
                             <p class="carte-perso-valeur fs-6">Trétiak</p>
                         </div>
                         <div class="px-0 d-flex gap-2 flex-row align-items-start">
-                            <h2 class="carte-perso-libele fs-5">Espèce :</h2>
+                            <span class="carte-perso-libele fs-5">Espèce :</span>
                             <p class="carte-perso-valeur fs-6">Mage</p>
                         </div>
                         <div class="p-0 w-100 text-center">
-                            <h3><span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span></h3>
+                            <span class="badge px-5 rounded-pill carte-perso-badge-amical">Amical</span>
                         </div>
                     </div>
                 </div>
@@ -216,11 +216,47 @@
 
     </footer>
 
+    <div class="modal fade" id="modaleApropos">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-black fs-3 fs-md-1">À propos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" style="min-height: 44px;"></button>
+                </div>
+                <div class="modal-body text-black fs-6 fs-md-5">
+                    <p>Site web encyclopédique sur la série Dans une Galaxie près de chez vous</p>
+
+                    <p><strong>Par :</strong><br>
+                        Rémi Doyle<br>
+                        Marie Laurence Sauvé</p>
+
+                    <p><strong>Développé dans le cadre du cours :</strong><br>
+                        420-931-MA Programmation Web (Front-End)<br>
+                        gr. 25605 - Été 2026<br>
+                        <strong>Professeur:</strong> Ahmed Imed Eddine Rabah
+                    </p>
+
+                    <p>Collège de Maisonneuve<br>
+                        LEA.8F Sécurité des applications mobiles, Web et de bureau</p>
+
+                    <p>Tout image est libre de droit, certaine image sont des <br>
+                        captures d'écrans fait par les dévloppeurs lors de visionnement d'épisode et de films </p>
+
+                    <p>License unsplash <br>
+                        https://unsplash.com/</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailperso1" tabindex="-1" role="dialog" aria-labelledby="modalpersolabel1" aria-hidden="true">
     <div class="modal fade" id="detailperso1" tabindex="-1" aria-labelledby="modalpersolabel1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
             <div class="modal-content modale-perso">
                 <div class="modal-header">
-                    <h5 class="modal-title modal-perso-titre" id="modalpersolabel1">La créature</h5>
+                    <h3 class="modal-title modal-perso-titre" id="modalpersolabel1">La créature</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -297,11 +333,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="detailperso2" tabindex="-1" aria-labelledby="modalpersolabel2" aria-hidden="true">
+    <div class="modal fade" id="detailperso2" tabindex="-1" role="dialog" aria-labelledby="modalpersolabel2" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
             <div class="modal-content modale-perso">
                 <div class="modal-header">
-                    <h5 class="modal-title modal-perso-titre" id="modalpersolabel2">Trétiak</h5>
+                    <h3 class="modal-title modal-perso-titre" id="modalpersolabel2">Trétiak</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
