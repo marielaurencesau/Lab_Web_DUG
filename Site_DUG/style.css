@@ -5,6 +5,7 @@
 ---Banniere toutes les pages---
 ---Barre de Navigation toutes les pages---
 ---menu-deroulant toutes les pages---
+---boutton sombre/clair---
 ---Texte chapeau toutes les pages---
 ---Pieds de pages toutes les pages---
 ---Page d'accueil/Mission (index)---
@@ -255,7 +256,18 @@ border-radius: 8px;
     font-weight: bold;
 }
 
+/*-----------boutton sombre/clair-------------*/
+.btn.icone-clair {
+    background-color: var(--gal_bg_pale_75);
+    color: var(--gal_second_bleu);
+    border: 2px solid var(--gal_second_bleu);
+}
 
+.btn.icone-sombre {
+    background-color: var(--gal_primaire_fonce);
+    color: var(--gal_second_bleu);
+    border: 2px solid var(--gal_second_bleu);
+}
 /*-----------Texte chapeau toutes les pages-------------*/
 
 .page-chapeau {
