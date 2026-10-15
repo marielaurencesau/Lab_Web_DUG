@@ -7,12 +7,14 @@ const CLES = {
 }
 
 boutonTheme.addEventListener("click",function(){
-    if (boutonTheme.getAttribute("aria-pressed") === "true"){
-        appliquerTheme("sombre")
-        localStorage.setItem(CLES.theme, "sombre")
-    }else{appliquerTheme("clair")
-        localStorage.setItem(CLES.theme, "clair")
-    }
+    setTimeout(() => {
+        if (boutonTheme.getAttribute("aria-pressed") === "true"){
+            appliquerTheme("sombre");
+            localStorage.setItem(CLES.theme, "sombre");
+        }else{appliquerTheme("clair");
+            localStorage.setItem(CLES.theme, "clair");
+        }
+    }, 0);
 })  
 
 const themeSauvegarde = localStorage.getItem(CLES.theme);
