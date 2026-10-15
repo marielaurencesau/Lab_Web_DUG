@@ -157,16 +157,22 @@
             <div class="row align-items-start justify-content-center">
                 <div class="col-12 col-md-8 mx-auto text-center">
                     <div class="d-flex flex-column flex-md-row gap-3 mt-5 mb-5 justify-content-center align-items-md-center w-100">
-                        <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
-                            href="#formulaire-telefaxe">Téléfaxer un message</a>
-                        <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
-                            href="#formulaire-ajout">Proposer un ajout/modification</a>
+                        <input type="radio" class="btn-check" name="choix-formulaire" id="radio-telefax" autocomplete="off" checked>
+                        <label class="btn-tel px-4 py-2 text-black rounded-pill" for="radio-telefax">
+                        Téléfaxer un message
+                        </label>
+
+                        <!-- Bouton Option 2 : Proposer un ajout/modification -->
+                        <input type="radio" class="btn-check" name="choix-formulaire" id="radio-modifier" autocomplete="off">
+                        <label class="btn-tel px-4 py-2 text-black rounded-pill" for="radio-modifier">
+                            Proposer un ajout/modification
+                        </label>
                     </div>
 
 
                     <!--Premier formulaire-->
-                    <form action="merci.html" method="get" class="formulaire-telefaxe mt-4 col-12 col-md-10 col-lg-8 mx-auto"
-                        id="formulaire-telefaxe">
+                    <form action="merci.html" method="get" class="formulaire-telefax mt-4 col-12 col-md-10 col-lg-8 mx-auto"
+                        id="formulaire-telefax">
                         <fieldset>
                             <div class="row align-items-center mb-1">
                                 <div class="col-12 col-md-4 text-end">
@@ -217,7 +223,7 @@
                     </form>
 
                     <!--Deuxieme formulaire-->
-                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-10 col-lg-8 mx-auto"
+                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-10 col-lg-8 mx-auto d-none"
                         id="formulaire-ajout">
 
                         <fieldset class="mb-1 d-flex justify-content-center gap-3 ">
