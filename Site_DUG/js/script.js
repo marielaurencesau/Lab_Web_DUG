@@ -1,14 +1,11 @@
-
+/*-------------------écouter bouton mode-sombre-------------------*/
 const boutonTheme = document.getElementById("bouton-theme");
 const imageTheme = document.getElementById("image-theme")
-
 
 const CLES = {
     theme: "galaxieTheme",
 }
 
-
-/*-------------------écouter bouton mode-sombre-------------------*/
 boutonTheme.addEventListener("click",function(){
     if (boutonTheme.getAttribute("aria-pressed") === "true"){
         appliquerTheme("sombre")
@@ -43,11 +40,34 @@ function appliquerTheme(theme) {
         boutonTheme.classList.remove("icone-clair");
         imageTheme.className = "bi bi-moon-stars fs-6";
     }
-}    
+}
 /*  theme sombre: .body --> theme-sombre 
                  #image-theme : "bi bi-brightness-high-fill fs-6"
     theme clair: .body --> theme-clair
                  #image-theme : "bi bi-brightness-high-fill fs-6"
 */
+/*--------------------------formulaires-------------------------*/
+const radioTelefaxe= document.getElementById("radio-telefax");
+const radioModifier= document.getElementById("radio-modifier");
+const formTelefaxe = document.getElementById("formulaire-telefax");
+const formAjout = document.getElementById("formulaire-ajout");
+
+function gererAffichageFormulaires() {
+    if (radioTelefaxe && radioTelefaxe.checked) {
+        if (formTelefaxe) formTelefaxe.style.setProperty("display", "block", "important");
+        if (formAjout) formAjout.style.setProperty("display", "none", "important");
+    } else if (radioModifier && radioModifier.checked) {
+        if (formTelefaxe) formTelefaxe.style.setProperty("display", "none", "important");
+        if (formAjout) formAjout.style.setProperty("display", "block", "important");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (radioTelefaxe) radioTelefaxe.addEventListener("change", gererAffichageFormulaires);
+    if (radioModifier) radioModifier.addEventListener("change", gererAffichageFormulaires);
+
+    gererAffichageFormulaires();
+});
+
 
 

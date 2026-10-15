@@ -35,7 +35,7 @@
                                 <img class="nav-bar-icon" src="images/icones/terre.png" alt="La Mission">
                             </div>
                             <div class="nav-bar-texte mb-0 fs-6 text-nowrap text-decoration-none">
-                                <p class="nav-p">La Mission</p>
+                                <p  class="nav-p text-center">La Mission</p>
                             </div>
                         </a>
                     </div>
@@ -46,7 +46,7 @@
                                 <img class="nav-bar-icon" src="images/icones/equipage.png" alt="equipage">
                             </div>
                             <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
-                                <p>L'équipage</p>
+                                <p  class="nav-p text-center">L'équipage</p>
                             </div>
                         </a>
                     </div>
@@ -57,7 +57,7 @@
                                 <img class="nav-bar-icon" src="images/icones/planete.png" alt="voyage">
                             </div>
                             <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
-                                <p>Le voyage</p>
+                                <p  class="nav-p text-center">Le voyage</p>
                             </div>
                         </a>
                     </div>
@@ -68,7 +68,7 @@
                                 <img class="nav-bar-icon" src="images/icones/alien.png" alt="rencontres">
                             </div>
                             <div class="nav-bar-texte nbt-long text-decoration-none">
-                                <p class="text-center">Les rencontres</p>
+                                <p  class="nav-p text-center">Les rencontres</p>
                             </div>
                         </a>
                     </div>
@@ -79,7 +79,7 @@
                                 <img class="nav-bar-icon" src="images/icones/citation.png" alt="citations">
                             </div>
                             <div class="nav-bar-texte nbt-long  text-decoration-none">
-                                <p class="text-center">Les citations</p>
+                                <p  class="nav-p text-center">Les citations</p>
                             </div>
                         </a>
                     </div>
@@ -91,7 +91,7 @@
                                 <img class="nav-bar-icon" src="images/icones/telephone.png" alt="telephone rouge">
                             </div>
                             <div class="nav-bar-texte nbt-long text-nowrap text-decoration-none">
-                                <p class="text-center">Le téléphone <br> rouge</p>
+                                <p  class="nav-p text-center">Le téléphone <br> rouge</p>
                             </div>
                         </a>
                     </div>
@@ -102,7 +102,7 @@
                                 <img class="nav-bar-icon" src="images/icones/logo_icone.png" alt="telephone rouge">
                             </div>
                             <div class="nav-bar-texte nbt-long text-nowrap text-decoration-none">
-                                <p class="text-center">Les épisodes</p>
+                                <p  class="nav-p text-center">Les épisodes</p>
                             </div>
                         </a>
                     </div>        
@@ -115,7 +115,7 @@
                                 <img class="nav-bar-icon" src="images/icones/romanofafard.png" alt="vaisseau">
                             </div>
                             <div class="nav-bar-texte fs-6 text-nowrap text-decoration-none">
-                                <p>Le vaisseau</p>
+                                <p  class="nav-p text-center">Le vaisseau</p>
                             </div>
                         </a>
                     </div>
@@ -144,6 +144,12 @@
     </header>
 
     <main>
+        <div class="d-flex align-items-center">
+            <button type="button" id="bouton-theme" class="btn btn-icon icone-clair m-2" 
+                    data-bs-toggle="button" aria-pressed="true" aria-label="bouton-theme">
+                <i class="bi bi-brightness-high-fill fs-6" id="image-theme" ></i>
+            </button>
+        </div>
         <div class="page-chapeau container d-flex justify-content-center align-items-center ">
             <p class=" fs-5 fs-md-3 mt-4 mb-4 w-100 w-md-75 text-center">
                 Bonjour et bienvenue au service d'assistance du Romano Fafard.
@@ -157,16 +163,22 @@
             <div class="row align-items-start justify-content-center">
                 <div class="col-12 col-md-8 mx-auto text-center">
                     <div class="d-flex flex-column flex-md-row gap-3 mt-5 mb-5 justify-content-center align-items-md-center w-100">
-                        <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
-                            href="#formulaire-telefaxe">Téléfaxer un message</a>
-                        <a class="btn-tel px-4 py-2 text-black text-decoration-none rounded-pill"
-                            href="#formulaire-ajout">Proposer un ajout/modification</a>
+                        <input type="radio" class="btn-check" name="choix-formulaire" id="radio-telefax" autocomplete="off" checked>
+                        <label class="btn-tel px-4 py-2 text-black rounded-pill" for="radio-telefax">
+                        Téléfaxer un message
+                        </label>
+
+                        <!-- Bouton Option 2 : Proposer un ajout/modification -->
+                        <input type="radio" class="btn-check" name="choix-formulaire" id="radio-modifier" autocomplete="off">
+                        <label class="btn-tel px-4 py-2 text-black rounded-pill" for="radio-modifier">
+                            Proposer un ajout/modification
+                        </label>
                     </div>
 
 
                     <!--Premier formulaire-->
-                    <form action="merci.html" method="get" class="formulaire-telefaxe mt-4 col-12 col-md-10 col-lg-8 mx-auto"
-                        id="formulaire-telefaxe">
+                    <form action="merci.html" method="get" class="formulaire-telefax mt-4 col-12 col-md-10 col-lg-8 mx-auto"
+                        id="formulaire-telefax">
                         <fieldset>
                             <div class="row align-items-center mb-1">
                                 <div class="col-12 col-md-4 text-end">
@@ -217,7 +229,7 @@
                     </form>
 
                     <!--Deuxieme formulaire-->
-                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-10 col-lg-8 mx-auto"
+                    <form action="merci.html" method="get" class="formulaire-ajout mt-4 col-12 col-md-10 col-lg-8 mx-auto d-none"
                         id="formulaire-ajout">
 
                         <fieldset class="mb-1 d-flex justify-content-center gap-3 ">
