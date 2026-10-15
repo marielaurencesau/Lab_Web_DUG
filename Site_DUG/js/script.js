@@ -47,6 +47,8 @@ function appliquerTheme(theme) {
                  #image-theme : "bi bi-brightness-high-fill fs-6"
     theme clair: .body --> theme-clair
                  #image-theme : "bi bi-brightness-high-fill fs-6"
+    theme disco  .body --> theme-disco
+                 #image-theme : "bi bi-globe fs-6"
 */
 /*--------------------------formulaires-------------------------*/
 const radioTelefaxe= document.getElementById("radio-telefax");
@@ -71,5 +73,57 @@ document.addEventListener("DOMContentLoaded", function() {
     gererAffichageFormulaires();
 });
 
+/*------------------------Tableaux épisodes-----------------------*/
+const listeTableau = document.getElementsByName("tableau_selection");
+const tableauSaison1 = document.getElementById("saison1");
+const tableauSaison2 = document.getElementById("saison2");
+const tableauSaison3 = document.getElementById("saison3");
+const tableauSaison4 = document.getElementById("saison4");
+const tableaufilms = document.getElementById("films_et_autres");
+const pitonS1 = document.getElementById("piton_s1")
+const pitonS2 = document.getElementById("piton_s2")
+const pitonS3 = document.getElementById("piton_s3")
+const pitonS4 = document.getElementById("piton_s4")
+const pitonFilms = document.getElementById("piton_films")
 
+listeTableau.forEach(function(bouton) {
+    bouton.addEventListener("click",function(){
+        tableauChoisi = this.value;
 
+        afficherTableau(tableauChoisi);
+    });
+});
+
+function afficherTableau(tableauChoisi){
+        tableauSaison1.classList.add("d-none");
+        tableauSaison2.classList.add("d-none");
+        tableauSaison3.classList.add("d-none");
+        tableauSaison4.classList.add("d-none");
+        tableaufilms.classList.add("d-none");
+        pitonS1.classList.remove("choisi");
+        pitonS2.classList.remove("choisi");
+        pitonS3.classList.remove("choisi");
+        pitonS4.classList.remove("choisi");
+        pitonFilms.classList.remove("choisi");
+
+    if (tableauChoisi === "saison1" || tableauChoisi === ""){
+        tableauSaison1.classList.remove("d-none");
+        pitonS1.classList.add("choisi");
+    }else if(tableauChoisi === "saison2"){
+        tableauSaison2.classList.remove("d-none");
+        pitonS2.classList.add("choisi");  
+    }else if(tableauChoisi === "saison3"){
+        tableauSaison3.classList.remove("d-none");
+        pitonS3.classList.add("choisi");
+    }else if(tableauChoisi === "saison4"){
+        tableauSaison4.classList.remove("d-none");
+        pitonS4.classList.add("choisi");
+    }else if(tableauChoisi === "film"){
+        tableaufilms.classList.remove("d-none");
+        pitonFilms.classList.add("choisi");
+    }else{
+        tableauSaison1.classList.remove("d-none");
+        pitonS1.classList.add("choisi");
+    }
+}
+afficherTableau(tableauChoisi)
