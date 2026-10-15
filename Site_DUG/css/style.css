@@ -107,7 +107,20 @@
 
 /* [T2] TYPOGRAPHIE */ 
 body {
-    background-image: url("./images/elements_site/bdrop2.jpg");
+    background-repeat: no-repeat;  
+    background-size:cover;
+    background-position:top;
+    font-family: var(--police-texte);
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+/* [T2] TYPOGRAPHIE */ 
+h1, h2, h3 { font-family: var(--police-titre); }
+
+body.body-404 {
+    background-image: url("../images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
     background-repeat: no-repeat;  
     background-size:cover;
     background-position:top;
@@ -120,21 +133,71 @@ body {
     padding: 0;
 }
 
-/* [T2] TYPOGRAPHIE */ 
-h1, h2, h3 { font-family: var(--police-titre); }
-
-body.body-404 {
-    background-image: url("./images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
-    background-repeat: no-repeat;  
-    background-size:cover;
-    background-position:top;
+/*-------------theme sombre---------------*/
+body.theme-sombre{
+    background-image: url("../images/elements_site/bdrop2.jpg");
     background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales);  
+}
+body.theme-sombre main .page-chapeau {
+    color: var(--gal_second_bleu);    
+}
+
+body.theme-sombre .nav-p {
     color: var(--gal_primaire_pales);
-    font-family: var(--police-texte);
-    font-size: 40px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+}
+
+body.theme-sombre .boite-item-nav.page-active .nav-p {
+background-color: var(--gal_bg_surligne);
+border-radius: 8px;
+}
+
+body.theme-sombre .boite-item-nav.page-active .nav-bar-icon-bloc {
+    border: 2px solid var(--gal_bg_surligne_50);
+    border-radius: 8px;
+}
+
+/*Page d'accueil/Mission (index)*/
+body.theme-sombre .texte-accueil-site {
+    color: var(--gal_second_bleu);
+}
+
+
+body.theme-sombre .texte-accueil-site ul li:nth-child(even) {
+   color: var(--gal_gris_pale);
+}
+
+/*-------------theme clair---------------*/
+body.theme-clair{
+    background-image: url("../images/elements_site/bdrop-light3.jpg");
+    background-color: var(--gal_primaire_pales);
+    color: var(--gal_primaire_fonce);  
+}
+body.theme-clair main .page-chapeau {
+    color: var(--gal_second_rouge);    
+}
+
+body.theme-clair .nav-p {
+    color: var(--gal_rouge_moyen);
+}
+
+body.theme-clair .boite-item-nav.page-active .nav-p {
+background-color: var(--gal_primaire_pales);
+border-radius: 8px;
+}
+
+body.theme-clair .boite-item-nav.page-active .nav-bar-icon-bloc {
+    border: 2px solid var(--gal_primaire_pales);
+    border-radius: 8px;
+}
+/*Page d'accueil/Mission (index)*/
+body.theme-clair .texte-accueil-site {
+    color: var(--gal_primaire_fonce);
+}
+
+
+body.theme-clair .texte-accueil-site ul li:nth-child(even) {
+   color: var(--gal_second_rouge);
 }
 
 
@@ -195,7 +258,6 @@ body.body-404 {
 /* [T3] SÉLECTEURS */
 .boite-item-nav .nav-bar-texte {
     opacity: 0;
-    color: var(--gal_primaire_pales);
     visibility: hidden;
     position: absolute;
     top:100%;
@@ -214,18 +276,6 @@ body.body-404 {
 .boite-item-nav:hover .nav-bar-texte {
     opacity: 1;
     visibility: visible;  
-}
-
-/* [T3] SÉLECTEURS */
-.boite-item-nav.page-active .nav-bar-icon-bloc {
-    border: 2px solid var(--gal_bg_surligne_50);
-    border-radius: 8px;
-}
-
-/* [T3] SÉLECTEURS */
-.boite-item-nav.page-active .nav-bar-texte p {
-background-color: var(--gal_bg_surligne_50);
-border-radius: 8px;
 }
 
 .menu-image {
@@ -270,9 +320,7 @@ border-radius: 8px;
 }
 /*-----------Texte chapeau toutes les pages-------------*/
 
-.page-chapeau {
-    color: var(--gal_second_bleu);    
-}
+
 
 /*-----------Pieds de pages toutes les pages-------------*/
 /* [T7] MEDIA QUERY - le pied de page passe en une colonne */
@@ -306,15 +354,7 @@ border-radius: 8px;
 }
 
 
-/*-----------Page d'accueil/Mission (index)-------------*/
-.texte-accueil-site {
-    color: var(--gal_primaire_pales);
-}
 
-/* [T3] SÉLECTEURS - descendant, état, structurel */
-.texte-accueil-site ul li:nth-child(even) {
-   color: var(--gal_gris_pale);
-}
 
 
 /*-----------Page equipage et voyage-------------*/
