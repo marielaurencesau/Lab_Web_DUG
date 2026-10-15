@@ -119,18 +119,16 @@ body {
 /* [T2] TYPOGRAPHIE */ 
 h1, h2, h3 { font-family: var(--police-titre); }
 
-body.body-404 {
+body.body-404.theme-sombre {
     background-image: url("../images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
-    background-repeat: no-repeat;  
-    background-size:cover;
-    background-position:top;
+    background-color: var(--gal_noir);
+    color: var(--gal_primaire_pales); 
+}
+
+body.body-404.theme-clair {
+    background-image: url("../images/elements_site/404light.jpg");
     background-color: var(--gal_noir);
     color: var(--gal_primaire_pales);
-    font-family: var(--police-texte);
-    font-size: 40px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
 }
 
 /*-------------theme sombre---------------*/
@@ -352,10 +350,6 @@ body.theme-clair .texte-accueil-site ul li:nth-child(even) {
     font-size: 13px;
     text-align: center;
 }
-
-
-
-
 
 /*-----------Page equipage et voyage-------------*/
 /* [T4] MODÈLE DE BOÎTE */
