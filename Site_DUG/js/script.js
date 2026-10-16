@@ -95,6 +95,9 @@ listeTableau.forEach(function(bouton) {
 });
 
 function afficherTableau(tableauChoisi){
+        if (!tableauSaison1) {
+        return;
+        }
         tableauSaison1.classList.add("d-none");
         tableauSaison2.classList.add("d-none");
         tableauSaison3.classList.add("d-none");
@@ -126,4 +129,166 @@ function afficherTableau(tableauChoisi){
         pitonS1.classList.add("choisi");
     }
 }
-afficherTableau(tableauChoisi)
+afficherTableau("saison1");
+
+
+/*------------------------validation formulaire------------------------*/
+
+"use strict";
+//declaration des variable 
+const champVotreNom = document.getElementById("votre-nom");
+const champVotreCourriel = document.getElementById("votre-courriel");
+const champAjoutNom = document.getElementById("ajout-nom");
+const champAjoutCourriel = document.getElementById("ajout-courriel")
+const formulaires = document.querySelectorAll("#formulaire-telefax, #formulaire-ajout");
+
+
+/* ---------------------------------------------------------------------
+   ÉTAPE 1 — Au chargement : remplir les champs avec ce qui est rangé
+   --------------------------------------------------------------------- */
+function chargerDonnees() {
+    if (champVotreNom) {
+        champVotreNom.value = localStorage.getItem("telefax-nom") || "";
+    }
+    if (champVotreCourriel) {
+        champVotreCourriel.value = localStorage.getItem("telefax-courriel") || "";
+    }
+    if (champAjoutNom) {
+        champAjoutNom.value = localStorage.getItem("ajout-nom") || "";
+    }
+    if (champAjoutCourriel) {
+        champAjoutCourriel.value = localStorage.getItem("ajout-courriel") || "";
+    }
+}
+
+chargerDonnees();
+
+
+/* ---------------------------------------------------------------------
+   ÉTAPE 2 — Validation et Enregistrement lors de la soumission
+   --------------------------------------------------------------------- */
+formulaires.forEach(function (formulaire) {
+    
+    // On désactive la validation native du navigateur pour laisser le JS gerer
+    formulaire.setAttribute("novalidate", "");
+
+    formulaire.addEventListener("submit", function (evenement) {
+        let formulaireValide = true;
+        const inputs = formulaire.querySelectorAll("input, textarea, select");
+
+        // Vérification de chaque champ du formulaire
+        inputs.forEach(function (input) {
+            if (!validerChamp(input)) {
+                formulaireValide = false;
+            }
+        });
+
+        // Bloquer l'envoi si le formulaire contient au moins une erreur
+                if (!formulaireValide) {
+            evenement.preventDefault();
+            } else {
+            // Si tout est beau, on sauvegarde manuellement les champs présents
+            if (formulaire.contains(champVotreNom) && champVotreNom) {
+                localStorage.setItem("telefax-nom", champVotreNom.value.trim());
+            }
+            if (formulaire.contains(champVotreCourriel) && champVotreCourriel) {
+                localStorage.setItem("telefax-courriel", champVotreCourriel.value.trim());
+            }
+            if (formulaire.contains(champAjoutNom) && champAjoutNom) {
+                localStorage.setItem("ajout-nom", champAjoutNom.value.trim());
+            }
+            if (formulaire.contains(champAjoutCourriel) && champAjoutCourriel) {
+                localStorage.setItem("ajout-courriel", champAjoutCourriel.value.trim());
+            }
+
+            // Sauvegarder séparément le sujet et le message pour la page merci.html
+            const champSujet = formulaire.querySelector("input[id*='sujet']");
+            const champMessage = formulaire.querySelector("textarea");
+
+            if (champSujet) {
+                localStorage.setItem("merci-sujet", champSujet.value.trim());
+            }
+            if (champMessage) {
+                localStorage.setItem("merci-message", champMessage.value.trim());
+            }
+        }
+    });
+
+    /* ---------------------------------------------------------------------
+       validation en temps reel
+       --------------------------------------------------------------------- */
+    formulaire.addEventListener("input", function (evenement) {
+        validerChamp(evenement.target);
+    });
+});
+
+
+/* ---------------------------------------------------------------------
+regles de validation d'un champ
+   --------------------------------------------------------------------- */
+function validerChamp(champ) {
+    let conteneurErreur = champ.parentNode.querySelector(".invalid-feedback");
+    if (!conteneurErreur) {
+        conteneurErreur = champ.parentNode.querySelector(".validation");
+    }
+    
+    if (!conteneurErreur) {
+        return true;
+    }
+
+    let messageErreur = "";
+    const valeur = champ.value.trim();
+
+    // RÈGLE 1 : Le champ requis est rester vide
+    if (champ.hasAttribute("required") && valeur === "") {
+        messageErreur = "Ce champ est obligatoire.";
+    } 
+    
+    // RÈGLE 2 : Le format de l'adresse courriel est incorrect
+    else if (champ.type === "email" && valeur !== "") {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(valeur)) {
+            messageErreur = "Veuillez entrer une adresse courriel valide (ex: nom@domaine.com).";
+        }
+    }
+    
+    // RÈGLE 3 : Le texte est trop court
+    else if (champ.hasAttribute("minlength") && valeur !== "") {
+        const minLength = parseInt(champ.getAttribute("minlength"), 10);
+        if (valeur.length < minLength) {
+            messageErreur = `Ce champ doit contenir au moins ${minLength} caractères.`;
+        }
+    }
+
+    if (messageErreur !== "") {
+        champ.setCustomValidity("Invalide");
+        conteneurErreur.textContent = messageErreur;
+        conteneurErreur.style.display = "block"; 
+        conteneurErreur.style.color = "red";
+        return false;
+    } else {
+        champ.setCustomValidity("");
+        conteneurErreur.textContent = "";
+        conteneurErreur.style.display = "none";
+        return true;
+    }
+}
+function afficherRemerciements() {
+    const conteneurSujet = document.getElementById("affichage-sujet");
+    const conteneurMessage = document.getElementById("affichage-message");
+
+    if (conteneurSujet || conteneurMessage) {
+        const sujetSauvegarde = localStorage.getItem("merci-sujet") || "Aucun sujet";
+        const messageSauvegarde = localStorage.getItem("merci-message") || "Aucun message";
+
+        if (conteneurSujet) {
+            conteneurSujet.textContent = sujetSauvegarde;
+        }
+        if (conteneurMessage) {
+            conteneurMessage.textContent = messageSauvegarde;
+        }
+        localStorage.removeItem("merci-sujet");
+        localStorage.removeItem("merci-message");
+    }
+}
+afficherRemerciements();
