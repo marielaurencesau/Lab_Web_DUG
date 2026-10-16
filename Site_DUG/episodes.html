@@ -143,9 +143,9 @@
     </header>
     <main>
         <div class="d-flex align-items-center">
-            <button type="button" id="bouton-theme" class="btn btn-icon icone-clair m-2" 
-                    data-bs-toggle="button" aria-pressed="true" aria-label="bouton-theme">
-                <i class="bi bi-brightness-high-fill fs-6" id="image-theme" ></i>
+            <button type="button" id="bouton-theme" class="btn btn-icon icone-clair m-2" data-bs-toggle="button"
+                aria-pressed="true" aria-label="bouton-theme">
+                <i class="bi bi-brightness-high-fill fs-6" id="image-theme"></i>
             </button>
         </div>
         <!--------chapeau-------->
@@ -159,140 +159,779 @@
         </div>
 
         <!--------boutons-------->
-        
+
         <div class="d-flex flex-column flex-md-row gap-3 mt-5 mb-5 justify-content-center align-items-md-center w-100">
-            <button class="btn btn-primary rounded-pill">
+            <button type="radio" id="piton_s1" name="tableau_selection" value="saison1" class="btn btn-primary rounded-pill choisi" checked>
                 Saison 1
             </button>
-            <button class="btn btn-primary rounded-pill">
+            <button type="radio" id="piton_s2" name="tableau_selection" value="saison2" class="btn btn-primary rounded-pill">
                 Saison 2
             </button>
-            <button class="btn btn-primary rounded-pill">
+            <button type="radio" id="piton_s3" name="tableau_selection" value="saison3" class="btn btn-primary rounded-pill">
+                Saison 3
+            </button>
+            <button type="radio" id="piton_s4" name="tableau_selection" value="saison4" class="btn btn-primary rounded-pill">
                 Saison 4
             </button>
-            <button class="btn btn-primary rounded-pill">
-                Saison 5
-            </button>
-            <button class="btn btn-primary rounded-pill">
-                Films
-            </button>
-            <button class="btn btn-primary rounded-pill">
-                Autres
+            <button type="radio" id="piton_films" name="tableau_selection" value="film" class="btn btn-primary rounded-pill">
+                Films et autres
             </button>
         </div>
-        
+
 
         <!--------tableau-------->
         <div class="w-75 mx-auto mt-4">
+            <div id="saison1">
+                <h2 class="h2 mb-3">La télésérie</h2>
 
-            <h2 class="h2 mb-3">La télésérie</h2>
-
-            <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
-                <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
-                    <thead class="fs-5">
-                        <tr class="ligne-table-titre">
-                            <th colspan="4" class="text-center">Saison 1</th>
-                        </tr>
-                        <tr class="fs-6 fs-md-5">
-                            <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">N° épisode</th>
-                            <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
-                            <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Diffusion originale</th>
-                            <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody class="fs-6">
-                        <tr>
-                            <td>1</td>
-                            <td>Attendez-nous pas pour souper!</td>
-                            <td>1999-01-25</td>
-                            <td>Après six mois de recherche infructueuse d'une planète habitable, l'équipage doit aller explorer plus loin dans l'espace. Ceci implique qu'ils ne seront plus en mesure de communiquer avec la Terre, à la grande crainte de Brad.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Bob, bu</td>
-                            <td>1999-01-25</td>
-                            <td>Bob se fait accidentellement déshydrater lorsqu'on a besoin de lui pour entrer dans l'orbite d'une planète.</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Tout feu tout flamme</td>
-                            <td>1999-02-01</td>
-                            <td>Le capitaine et Valence n'arrivent plus à se cacher leur amour.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Le secret</td>
-                            <td>1999-02-15</td>
-                            <td>Brad ne compte pas laisser le capitaine et Valence entretenir leurs nouveaux liens.</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Le huitième passager</td>
-                            <td>1999-02-22</td>
-                            <td>Brad affirme avoir vu une créature extra-terrestre dans le vaisseau, mais le reste de l'équipage ne le croit pas.</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Le réveil de Flavien</td>
-                            <td>1999-03-01</td>
-                            <td>Flavien se fait sortir de régénérescence après que l'électricité ait été coupée, ce qui pourrait lui être fatal.</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>La liste</td>
-                            <td>1999-03-08</td>
-                            <td>Brad omet de dire à Falbo qu'un exercice de défense va être tenu. Falbo se retrouve ainsi convaincu que des extraterrestres ont envahi le vaisseau.</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>La course contre la montre</td>
-                            <td>1999-03-15</td>
-                            <td>Le capitaine Patenaude est atteint d'une crise d'appendicite. Mirabella, avec l'aide de Valence, tente de l'opérer. Durant ce temps, Brad prend le commandement du vaisseau. Ayant repéré une planète qui semble prometteuse, il exige à Bob et à Flavien de se dépêcher de l'atteindre avant que le capitaine ne puisse reprendre son poste, pour être celui ayant accompli la mission.</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Le virus</td>
-                            <td>1999-03-22</td>
-                            <td>Brad donne un virus à Gervais et Bob enclenche l'auto-destruction du vaisseau pendant qu'il est somnambule.</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Tou-tou-tou-touuut!</td>
-                            <td>1999-03-29</td>
-                            <td>L'équipage se met à entendre des sons inconnus provenant d'extra-terrestres.</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Le procès</td>
-                            <td>1999-04-05</td>
-                            <td>Brad est en procès pour avoir faussé les rapports de sonde.</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>Le verglas</td>
-                            <td>1999-04-12</td>
-                            <td>Le Romano Fafard est emprisonné sous une immense couche de verglas.</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>Capitaine d'un jour</td>
-                            <td>1999-04-19</td>
-                            <td>Flavien, Brad et Bob doivent remporter un défi pour gagner la chance d'être capitaine d'un jour.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Saison 1</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">N°
+                                    épisode
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Diffusion
+                                    originale
+                                </th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td>1</td>
+                                <td>Attendez-nous pas pour souper!</td>
+                                <td>1999-01-25</td>
+                                <td>Après six mois de recherche infructueuse d'une planète habitable, l'équipage doit
+                                    aller
+                                    explorer plus loin dans l'espace. Ceci implique qu'ils ne seront plus en mesure de
+                                    communiquer avec la Terre, à la grande crainte de Brad.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob, bu</td>
+                                <td>1999-01-25</td>
+                                <td>Bob se fait accidentellement déshydrater lorsqu'on a besoin de lui pour entrer dans
+                                    l'orbite d'une planète.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tout feu tout flamme</td>
+                                <td>1999-02-01</td>
+                                <td>Le capitaine et Valence n'arrivent plus à se cacher leur amour.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Le secret</td>
+                                <td>1999-02-15</td>
+                                <td>Brad ne compte pas laisser le capitaine et Valence entretenir leurs nouveaux liens.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Le huitième passager</td>
+                                <td>1999-02-22</td>
+                                <td>Brad affirme avoir vu une créature extra-terrestre dans le vaisseau, mais le reste
+                                    de
+                                    l'équipage ne le croit pas.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Le réveil de Flavien</td>
+                                <td>1999-03-01</td>
+                                <td>Flavien se fait sortir de régénérescence après que l'électricité ait été coupée, ce
+                                    qui
+                                    pourrait lui être fatal.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>La liste</td>
+                                <td>1999-03-08</td>
+                                <td>Brad omet de dire à Falbo qu'un exercice de défense va être tenu. Falbo se retrouve
+                                    ainsi convaincu que des extraterrestres ont envahi le vaisseau.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>La course contre la montre</td>
+                                <td>1999-03-15</td>
+                                <td>Le capitaine Patenaude est atteint d'une crise d'appendicite. Mirabella, avec l'aide
+                                    de
+                                    Valence, tente de l'opérer. Durant ce temps, Brad prend le commandement du vaisseau.
+                                    Ayant repéré une planète qui semble prometteuse, il exige à Bob et à Flavien de se
+                                    dépêcher de l'atteindre avant que le capitaine ne puisse reprendre son poste, pour
+                                    être
+                                    celui ayant accompli la mission.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Le virus</td>
+                                <td>1999-03-22</td>
+                                <td>Brad donne un virus à Gervais et Bob enclenche l'auto-destruction du vaisseau
+                                    pendant
+                                    qu'il est somnambule.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Tou-tou-tou-touuut!</td>
+                                <td>1999-03-29</td>
+                                <td>L'équipage se met à entendre des sons inconnus provenant d'extra-terrestres.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Le procès</td>
+                                <td>1999-04-05</td>
+                                <td>Brad est en procès pour avoir faussé les rapports de sonde.</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Le verglas</td>
+                                <td>1999-04-12</td>
+                                <td>Le Romano Fafard est emprisonné sous une immense couche de verglas.</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Capitaine d'un jour</td>
+                                <td>1999-04-19</td>
+                                <td>Flavien, Brad et Bob doivent remporter un défi pour gagner la chance d'être
+                                    capitaine
+                                    d'un jour.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="saison2">
+                <h2 class="h2 mb-3">La télésérie</h2>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Saison 2</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">N°
+                                    épisode
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Diffusion
+                                    originale
+                                </th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td>1</td>
+                                <td>Hasta Luego</td>
+                                <td>1999-09-01</td>
+                                <td>L'équipage du Romano Fafard apprend que Mirabella n'est pas réellement médecin
+                                    (seule
+                                    Valence était au courant) et qu'elle est recherchée par la police. À la suite de cet
+                                    aveu, Mirabella se sauve du Romano Fafard sans Bob, alors qu'ils avaient planifié de
+                                    s'enfuir ensemble sur une planète. Falbo disparaît en tentant de la retrouver.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Le Minerai</td>
+                                <td>1999-09-08</td>
+                                <td>Bob est dévasté par le départ de Mirabella et ramène une roche extra-terrestre à
+                                    bord du
+                                    vaisseau comme substitut.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Lindâ</td>
+                                <td>1999-09-15</td>
+                                <td>Brad va en thérapie avec Valence et change radicalement de personnalité.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>La belle et la bête</td>
+                                <td>1999-09-22</td>
+                                <td>L’équipage découvre une station orbitale russe à la dérive et en sauve les deux
+                                    passagers survivants, soient Pétrolia et Serge.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Le transistor</td>
+                                <td>1999-09-29</td>
+                                <td>Serge a besoin d'un ancien transistor pour continuer à fonctionner.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Voyage au fond des rêves</td>
+                                <td>1999-10-06</td>
+                                <td>Bob fait un rêve prémonitoire dans lequel se produit une catastrophe.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Up tempo</td>
+                                <td>1999-10-13</td>
+                                <td>L'équipage se retrouve dans l'orbite d'une planète dont l'espace-temps est déréglé.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Le Mime</td>
+                                <td>1999-10-20</td>
+                                <td>Brad et Bob sont en guerre. Flavien essaie de les réconcilier sur la planète
+                                    Granola-8,
+                                    mais ils y trouvent un mime abandonné. Ils le ramènent à bord du Romano Fafard pour
+                                    l'adopter, malgré les plaintes et les allergies de Brad.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Flavien et Juliette</td>
+                                <td>1999-10-27</td>
+                                <td>Lors de la visite d'une planète qui semble être parfaite, l'équipage rencontre une
+                                    autre
+                                    race voulant s'en emparer.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Le Roi</td>
+                                <td>1999-11-03</td>
+                                <td>Le capitaine Patenaude et Valence profitent du beau temps sur la planète Ouch pour y
+                                    passer un séjour en amoureux, sous prétexte d'y étudier la psychologie des roches.
+                                    Ils
+                                    croient la planète déserte, dû à la température qui chute à -283 °C la nuit. Avant
+                                    leur
+                                    départ, le capitaine a ordonné à Brad et Bob de faire le ménage à bord du vaisseau.
+                                    Le
+                                    capitaine et Valence se font attaqués par une forme de vie extra-terrestre. Brad et
+                                    Bob
+                                    viennent à leur secours et les extra-terrestres prennent alors Bob pour un dieu,
+                                    puisque
+                                    celui-ci ressemble trait pour trait à une de leur statuette.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Les Esclaves</td>
+                                <td>1999-11-10</td>
+                                <td>Le Romano Fafard traverse une zone complètement vide. Bob vole, contre l'avis du
+                                    capitaine, à Omega 4. Le vaisseau se fait alors intercepter par un homme qui dit
+                                    être un
+                                    agent de police de l'espace, mais qui est en réalité en ancien prisonnier qui
+                                    souhaite
+                                    revendre les membres de l'équipage à titre d'esclave.</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Le Spectre</td>
+                                <td>1999-11-17</td>
+                                <td>Le spectre du capitaine Romano Fafard apparaît sur le vaisseau, et Flavien sera
+                                    convaincu qu'il s'agit de son père.</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Rintintinos</td>
+                                <td>1999-11-24</td>
+                                <td>Une invention de Pétrolia permet de se mettre dans la peau des autres.</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Jim et Jules</td>
+                                <td>2000-01-05</td>
+                                <td>Le Romano Fafard trouve sur son chemin une clôture géante qui nécessiterait un mois
+                                    à
+                                    contourner. Le capitaine ordonne de foncer pour passer au travers, mais le vaisseau
+                                    est
+                                    alors pris au piège. La clôture est en fait une seule entité qui possède deux
+                                    consciences, Jim et Jules, et qui souhaite désintégrer le Romano Fafard pour se
+                                    nourrir
+                                    des minéraux</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Histoire de pêche</td>
+                                <td>2000-01-12</td>
+                                <td>Charles, Serge et Flavien sont partis pêcher sur une planète. Valence et Pétrolia
+                                    sont
+                                    supposées venir les rejoindre, mais toutes deux ignorent sur quelle planète les
+                                    hommes
+                                    sont, puisque Flavien a brouillé les données du téléfax avant de partir. Ils ne
+                                    peuvent
+                                    pas communiquer avec le vaisseau car l'émetteur est tombé à l'eau.</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>La Fin</td>
+                                <td>2000-01-19</td>
+                                <td>Le capitaine Jacques Bibeau, un prétendu Terrien, annonce au capitaine Patenaude que
+                                    sa
+                                    mission est terminée.</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>La Star des Étoiles</td>
+                                <td>2000-01-26</td>
+                                <td>Le Romano Fafard frappe une capsule cryogénique en provenance de la Terre. Le
+                                    capitaine
+                                    Patenaude ordonne de faire monter la capsule à bord et de l'ouvrir. Elvis Presley en
+                                    sors et raconte qu'il a demandé à se faire cryogéniser parce qu'il en avait assez de
+                                    sa
+                                    vie de star. Flavien cherche alors à jouer de la musique avec son idole, Pétrolia
+                                    deviens une groupie et Brad tente de devenir son gérant.</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Virtuellement Vôtre</td>
+                                <td>2000-02-02</td>
+                                <td>Flavien s'embarque dans un jeu virtuel extrême lui causant des blessures réelles.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>Le Test</td>
+                                <td>2000-02-09</td>
+                                <td>Les membres de l'équipage font passer un test à Brad.</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Caïn et Abel</td>
+                                <td>2000-02-16</td>
+                                <td>Bob pense que Flavien veut lui voler Pétrolia.</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>La Source Mystérieuse</td>
+                                <td>2000-02-23</td>
+                                <td>Flavien et Pétrolia se retrouvent sur une planète où se trouve une source d'eau
+                                    intrigante.</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Le Rejet</td>
+                                <td>2000-03-01</td>
+                                <td>Brad envoie Bob en dehors du vaisseau.</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>La Fissure</td>
+                                <td>2000-03-08</td>
+                                <td>Lors d'une expérience ratée, Pétrolia ouvre une fissure spacio-temporelle qui ramène
+                                    l'équipage très loin dans le passé.</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>La Misère des Riches</td>
+                                <td>2000-03-15</td>
+                                <td>Bob s'en remet à Brad pour changer sa personnalité dans le but de séduire Pétrolia.
+                                    Il
+                                    devient donc un être suffisant et manipulateur au grand désarroi de ses amis.</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Zircon</td>
+                                <td>2000-03-22</td>
+                                <td>L'équipage deviendra amnésique après s'être mis en orbite autour d'une planète en
+                                    diamant.</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Le Fou</td>
+                                <td>2000-03-29</td>
+                                <td>Le Capitaine perd la tête juste avant de disparaître mystérieusement, Brad prendra
+                                    ensuite les commandes et ordonnera l'attaque de la planète des Barzots.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="saison3">
+                <h2 class="h2 mb-3">La télésérie</h2>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Saison 3</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">N°
+                                    épisode
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Diffusion
+                                    originale
+                                </th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td>1</td>
+                                <td>Les mages</td>
+                                <td>2001-01-07</td>
+                                <td>Brad, qui est désormais Capitaine, ordonne le bombardement de la planète des
+                                    Barzots.
+                                    Pendant ce temps, Valence tentera de retrouver le vrai Capitaine avec l'aide des
+                                    autres
+                                    membres de l'équipage.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Spit-Barishny-Fire</td>
+                                <td>2001-01-14</td>
+                                <td>Afin de passer aux douanes, les membres de l'équipage doivent passer un test virtuel
+                                    afin de les libérer de leurs émotions trop fortes.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>La fièvre d'Ovégas</td>
+                                <td>2001-01-21</td>
+                                <td>L'équipage se retrouve sur une planète Casino où ils essaieront de ne pas jouer trop
+                                    compulsivement.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Morver, C'est mourir un peu</td>
+                                <td>2001-01-28</td>
+                                <td>Afin de passer au travers d'une galaxie infestée d'un puissant virus, l'équipage
+                                    doit se
+                                    préparer à l'affronter. Pour garder leur système immunitaire «actif», ils s'assurent
+                                    d'être malades avant d'entrer dans la galaxie. Bob, qui se croit incapable de tomber
+                                    malade, ment sur son état de santé et feint la maladie. Ceci compliquera les choses…
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Au-delà du Réal</td>
+                                <td>2001-02-04</td>
+                                <td>L'équipage appelle un agent d'immeuble pour les planètes, mais Flavien garde
+                                    toujours un
+                                    certain doute.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>La guerre des sexes</td>
+                                <td>2001-02-11</td>
+                                <td>Valence tente de réconcilier les hommes et les femmes d'une planète où les deux
+                                    sexes
+                                    sont en guerre.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>La Créature</td>
+                                <td>2001-02-18</td>
+                                <td>Flavien voit une terrifiante créature à bord du Romano Fafard qui terrorisera
+                                    l'équipage.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Le Yable</td>
+                                <td>2001-02-25</td>
+                                <td>Pour la St-Jean-Baptiste, Flavien sors sa guitare et commence à jouer du Paul Piché.
+                                    Ceci réveille le diable, qui déteste cette musique, et qui exige de ramener deux
+                                    âmes en
+                                    enfer, mais Valence réussi à le convaincre de léguer ses pouvoirs à un successeur.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Croûte que croûte</td>
+                                <td>2001-03-04</td>
+                                <td>Après que Pétrolia ait trafiqué le toaster de Bob, celui-ci projette une toast
+                                    volante
+                                    qui devient très dangereuse.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Le mal de Terre</td>
+                                <td>2001-03-11</td>
+                                <td>Bob est atteint d'un étrange mal de vivre. Le diagnostic de Serge 2 est formel, mais
+                                    il
+                                    reçoit un coup au visage de la part de Brad, ce qui provoque et court-circuit et
+                                    l'empêche de révéler ce dont est atteint Bob. Pétrolia tente de réparer l'androïde
+                                    alors
+                                    que Flavien et le capitaine essaient tant bien que mal de motiver le pilote.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Deux frères</td>
+                                <td>2001-03-18</td>
+                                <td>Selon une certaine lettre retrouvée, Brad et le Capitaine seraient des frères.</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Le retour du Jet d'aïl</td>
+                                <td>2001-03-25</td>
+                                <td>Bob a rêvé pour la 3e fois qu'un Jedi arrivait dans le vaisseau pour rencontrer un
+                                    aspirant Jedi. L'équipage cherche alors à découvrir qui est l'aspirant Jedi et se
+                                    prépare à accueillir le Jedi.</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>La Genèse</td>
+                                <td>2001-04-01</td>
+                                <td>À l'occasion de Noël, le capitaine offre un collier de perles à Valence. À la suite
+                                    des
+                                    interrogations de Brad, il avoue vivre une idylle avec la psychologue et démissionne
+                                    de
+                                    son poste. Il raconte alors ses souvenirs du moment où il a rencontré chacun des
+                                    membres
+                                    de l'équipage, lors de l'épreuve de sélection.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="saison4">
+                <h2 class="h2 mb-3">La télésérie</h2>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Saison 4</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">N°
+                                    épisode
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Diffusion
+                                    originale
+                                </th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td>1</td>
+                                <td>Médecine d'ourse</td>
+                                <td>2001-09-02</td>
+                                <td>Serge est détruit à la suite d'un accident dont Brad est à l'origine. Les membres
+                                    d'équipage font face à deux problèmes : ils doivent trouver un nouveau médecin pour
+                                    remplacer Serge et réparer le système d'allumage, qui a été détruit lors de
+                                    l'accident.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maman Brad</td>
+                                <td>2001-09-09</td>
+                                <td>Une entité extraterrestre choisit Brad comme mère. Celui-ci devient donc enceint.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Œdipe Bouchard</td>
+                                <td>2001-09-16</td>
+                                <td>Un homme étrange débarque sur le vaisseau et propose une planète habitable en
+                                    échange de
+                                    Valence. Cependant, Flavien éprouve une forte haine envers cet homme.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>No man's land</td>
+                                <td>2001-09-23</td>
+                                <td>En l'honneur de l'anniversaire de Pétrolia, Bob et Flavien ont réparé Serge 2,
+                                    devenu
+                                    Serge 3, et lui ont octroyé une nouvelle fonction permettant de choisir parmi 1001
+                                    de
+                                    ses personnalités grâce à une petite zapette. Bob, Flavien et Brad se servent de
+                                    cette
+                                    nouvelle fonction pour un usage personnel, contre l'avis de Pétrolia. Durant ce
+                                    temps,
+                                    l'équipage se prépare à traverser une zone qui est interdite aux terriens.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cuits cuits cuits</td>
+                                <td>2001-09-30</td>
+                                <td>Le capitaine tient à ce que le vaisseau passe entre deux étoiles, même si le mercure
+                                    doit grimper dangereusement.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Hamlet (au fromage)</td>
+                                <td>2001-10-07</td>
+                                <td>Brad a empoisonné le Capitaine et celui-ci meurt subitement.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Amnésie international</td>
+                                <td>2001-10-14</td>
+                                <td>Le Capitaine, Bob et Flavien perdent graduellement la mémoire, et Brad devra sauver
+                                    la
+                                    situation.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>As stéroïde</td>
+                                <td>2001-10-21</td>
+                                <td>L'équipage se prépare à frôler la météorite Sonia-27, de la taille de la
+                                    Saskatchewan.
+                                    Pour ce faire, Bob, Brad, Flavien et Pétrolia utilisent une colle inventée par cette
+                                    dernière pour fixer les tuiles du vaisseau et éviter qu'elles ne tombent, mais Bob
+                                    et
+                                    Brad se collent accidentellement la main ensemble. Flavien calcule que la
+                                    trajectoire de
+                                    la météorite la mènera à frapper la Terre dans cinq mois. Le capitaine Patenaude
+                                    cherche
+                                    une solution pour éviter cette catastrophe.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>La belle ordure</td>
+                                <td>2001-10-28</td>
+                                <td>Lors de l'exploration du dépotoir de l'univers, Brad ramène une jeune femme bien
+                                    spéciale avec lui.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Le destin</td>
+                                <td>2001-11-04</td>
+                                <td>Croyant faire affaire avec une agence d'escorte, Brad commande une voyante à bord du
+                                    vaisseau.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Casanobrad</td>
+                                <td>2001-11-11</td>
+                                <td>Après une erreur avec une de ses inventions, Brad se fait cloner et son double
+                                    devient
+                                    l'idole des femmes.</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>La fin de la faim</td>
+                                <td>2001-11-18</td>
+                                <td>L'équipage meurt de faim. Il ne reste plus qu'une seule pomme à manger dans le
+                                    vaisseau.
+                                    L'équipage attend le rapport de la sonde pour savoir s'il y a une planète contenant
+                                    de
+                                    la nourriture près d'eux. En attendant, le capitaine vante les qualités de chacun
+                                    des
+                                    membres de l'équipage. S'ensuivent des extraits des moments forts de la série.</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Bonsoir, ils sont partis</td>
+                                <td>2001-11-25</td>
+                                <td>L’équipage trouve une planète parfaite, mais la mission se terminera-t-elle en
+                                    beauté?
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="films_et_autres">
+                <h2 class="h2 mb-3">Les films</h2>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Films</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">
+                                    Affiche
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Sortie</th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/film1.jpg"
+                                        alt="affiche Galaxie film 1"> </td>
+                                <td>Dans une galaxie près de chez vous - Le film</td>
+                                <td>2004-04-09</td>
+                                <td>En 2039, l'équipage du vaisseau Romano-Fafard, dirigé par le capitaine Patenaude,
+                                    est
+                                    toujours à la recherche d'une planète viable pour redonner vie à l'humanité et
+                                    accueillir les six milliards de tatas de la Terre. Ils en ont peut-être enfin trouvé
+                                    une, mais ce ne sera pas sans problème</td>
+                            </tr>
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/film2.jpg"
+                                        alt="affiche Galaxie film 2"></td>
+                                <td>Dans une galaxie près de chez vous 2</td>
+                                <td>2008-04-18</td>
+                                <td>Après que leur sonde se soit écrasée sur une planète nouvellement découverte,
+                                    l'équipage
+                                    du Romano Fafard est présenté à une race extraterrestre qui pourrait savoir où
+                                    trouver
+                                    la planète idéale pour déplacer la race humaine mourante.</td>
+                            </tr>
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/film3questionmark.jpg"
+                                        alt="affiche inconnue"></td>
+                                <td>Dans une galaxie près de chez vous 3 (titre présumé) </td>
+                                <td>TBD</td>
+                                <td>Le 3e film a été annoncé officiellement en 2019, Téléfilm Canada a annoncé le
+                                    financement de la production en avril 2026. Aucune date de sortie annoncée</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="h2 mb-3">Les livres</h2>
+                <div class="table-responsive conteneur-table rounded-3 overflow-hidden border mb-4">
+                    <table class="table table-bordered rounded-3 mb-0 tableau-episodes">
+                        <thead class="fs-5">
+                            <tr class="ligne-table-titre">
+                                <th colspan="4" class="text-center">Livres</th>
+                            </tr>
+                            <tr class="fs-6 fs-md-5">
+                                <th scope="col" class="colonne1 text-center text-nowrap" style="min-width: 90px;">
+                                    Couverture
+                                </th>
+                                <th scope="col" class="colonne2" style="min-width: 180px;">Titre</th>
+                                <th scope="col" class="colonne3 text-nowrap" style="min-width: 140px;">Sortie</th>
+                                <th scope="col" class="colonne4" style="min-width: 280px;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-6">
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/livre1.jpg"
+                                        alt="couverture livre 1"></td>
+                                <td>Dans une galaxie près de chez vous : scénario du film-- et autres stupidités</td>
+                                <td>2004-11-15</td>
+                                <td>Scénario du 1er film Dans une Galaxie près de chez vous, accompagné de commentaires des auteurs Pierre-Yves Bernards et Claude Legault</td>
+                            </tr>
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/livre2.jpg"
+                                        alt="couverture livre 2"></td>
+                                <td>Dans une galaxie près de chez vous T.1.1 - Saison 1, Volume 1</td>
+                                <td>2024-09-24</td>
+                                <td>Scénarios des épisodes 1 à 7 de la première saison de le série Dans une galaxie près de chez vous, accompagné de photos et commentaires des auteurs Pierre-Yves Bernards et Claude Legault</td>
+                            </tr>
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/livre3.jpg"
+                                        alt="couverture livre 3"></td>
+                                <td>Dans une galaxie près de chez vous T.1.2 - Saison 1, Volume 2</td>
+                                <td>2024-09-24</td>
+                                <td>Scénarios des épisodes 8 à 13 de la première saison de le série Dans une galaxie près de chez vous, accompagné de photos et commentaires des auteurs Pierre-Yves Bernards et Claude Legault</td>
+                            </tr>
+                            <tr>
+                                <td><img class="image-tableau" src="./images/elements_site/livre4.jpg"
+                                        alt="couverture livre 4"></td>
+                                <td>Dans une galaxie près de chez vous T.2.1 - Saison 2, Volume 1</td>
+                                <td>2025-11-18</td>
+                                <td>Scénarios des épisodes 1 à 6 de la deuxième saison de le série Dans une galaxie près de chez vous, accompagné de photos et commentaires des auteurs Pierre-Yves Bernards et Claude Legault</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
 
     </main>
-     <footer class="pied-page container-fluid pt-4 pb-2 mt-auto text-center">
-        <div class="pied-page-premier d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 gap-md-4 mb-3">
+    <footer class="pied-page container-fluid pt-4 pb-2 mt-auto text-center">
+        <div
+            class="pied-page-premier d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 gap-md-4 mb-3">
             <p class="my-auto">Tous droits réservés</p>
             <p class="my-auto">@ Doyle-Sauvé-2026</p>
             <p class="my-auto">
                 <a class="text-decoration-none lien-a-propos" href="#modaleApropos" data-bs-toggle="modal"
-                    data-bs-target="#modaleApropos" id="pied-link"> 
+                    data-bs-target="#modaleApropos" id="pied-link">
                     À propos
                 </a>
             </p>
@@ -336,7 +975,8 @@
             </div>
 
         </div>
-    </div>    <script src="vendor/bootstrap.bundle.min.js"></script>
+    </div>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

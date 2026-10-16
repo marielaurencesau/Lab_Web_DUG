@@ -120,7 +120,7 @@ body {
 h1, h2, h3 { font-family: var(--police-titre); }
 
 body.body-404.theme-sombre {
-    background-image: url("../images/elements_site/nasa-hubble-space-telescope-Md5Chaod3Ig-unsplash.jpg");
+    background-image: url("../images/elements_site/bdrop404dark.jpg");
     background-color: var(--gal_noir);
     color: var(--gal_primaire_pales); 
 }
@@ -732,7 +732,11 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
     width: 45%
 }
 
-/* [T9] TABLEAU STYLÉ */
+.image-tableau {
+    max-height: 10em;
+}
+
+/* [T9] piton */
 .btn.btn-primary {
     --bs-btn-color: var(--gal_primaire_pales);
     --bs-btn-bg: var(--gal_second_bleu) ;
@@ -749,6 +753,11 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
     --bs-btn-font-family: val(--police-texte) ;
     --bs-btn-padding-x: 1rem;
     --bs-btn-padding-y: .5rem;
+}
+.btn.btn-primary.choisi {
+    --bs-btn-color: var(--gal_second_bleu);
+    --bs-btn-bg: var(--gal_bg_surligne_50) ;
+    --bs-btn-border-color: var(--gal_second_bleu);
 }
 
 
