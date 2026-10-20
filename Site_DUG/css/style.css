@@ -676,17 +676,28 @@ input:user-invalid, select:user-invalid, textarea:user-invalid, .check-input:use
    border:2px solid var(--gal_rouge_petant);
    background-color: var(--gal_primaire_pales);
 }
-input:user-valid + .validation::after, textarea:user-valid + .validation::after { content: "✓"; color: green; }
-input:user-invalid + .validation::after, textarea:user-invalid + .validation::after { content: "x"; color: red; }
+
+input:user-valid + .validation::after, textarea:user-valid + .validation::after { 
+    content: "✓"; color: green; 
+}
+
+input:user-invalid + .validation::after, textarea:user-invalid + .validation::after { 
+    content: "x"; color: red; 
+}
 
 .validation{
   position: absolute;
   right: 25px;
-  top: 50%;
+  top: 19px;
   transform: translateY(-50%);
 
   font-size: 18px;
   pointer-events: none;
+}
+
+.invalid-feedback{
+    font-size: 0.750rem;
+    line-height: 1.3;
 }
 
 

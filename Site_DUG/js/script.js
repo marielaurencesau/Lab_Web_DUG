@@ -147,18 +147,13 @@ const formulaires = document.querySelectorAll("#formulaire-telefax, #formulaire-
    ÉTAPE 1 — Au chargement : remplir les champs avec ce qui est rangé
    --------------------------------------------------------------------- */
 function chargerDonnees() {
-    if (champVotreNom) {
-        champVotreNom.value = localStorage.getItem("telefax-nom") || "";
-    }
-    if (champVotreCourriel) {
-        champVotreCourriel.value = localStorage.getItem("telefax-courriel") || "";
-    }
-    if (champAjoutNom) {
-        champAjoutNom.value = localStorage.getItem("ajout-nom") || "";
-    }
-    if (champAjoutCourriel) {
-        champAjoutCourriel.value = localStorage.getItem("ajout-courriel") || "";
-    }
+    const nom = localStorage.getItem("telefax-nom") || "";
+    const courriel = localStorage.getItem("telefax-courriel")
+
+    if (champVotreNom) {champVotreNom.value = nom;}
+    if (champAjoutNom) {champAjoutNom.value = nom;}
+    if (champVotreCourriel) {champVotreCourriel.value = courriel;}
+    if (champAjoutCourriel) {champAjoutCourriel.value = courriel;}
 }
 
 chargerDonnees();
@@ -188,18 +183,16 @@ formulaires.forEach(function (formulaire) {
             evenement.preventDefault();
             } else {
             // Si tout est beau, on sauvegarde manuellement les champs présents
-            if (formulaire.contains(champVotreNom) && champVotreNom) {
-                localStorage.setItem("telefax-nom", champVotreNom.value.trim());
+            const champNom = formulaire.querySelector("input[name='nom']")
+            const champCourriel = formulaire.querySelector("input[name='email']")
+            
+            if (champNom) {
+                localStorage.setItem("telefax-nom", champNom.value.trim());
             }
-            if (formulaire.contains(champVotreCourriel) && champVotreCourriel) {
-                localStorage.setItem("telefax-courriel", champVotreCourriel.value.trim());
+            if (champCourriel) {
+                localStorage.setItem("telefax-courriel", champCourriel.value.trim());
             }
-            if (formulaire.contains(champAjoutNom) && champAjoutNom) {
-                localStorage.setItem("ajout-nom", champAjoutNom.value.trim());
-            }
-            if (formulaire.contains(champAjoutCourriel) && champAjoutCourriel) {
-                localStorage.setItem("ajout-courriel", champAjoutCourriel.value.trim());
-            }
+        
 
             // Sauvegarder séparément le sujet et le message pour la page merci.html
             const champSujet = formulaire.querySelector("input[id*='sujet']");
@@ -229,8 +222,15 @@ regles de validation d'un champ
 function validerChamp(champ) {
     let conteneurErreur = champ.parentNode.querySelector(".invalid-feedback");
     if (!conteneurErreur) {
-        conteneurErreur = champ.parentNode.querySelector(".validation");
+        // Pas de .validation dans le parent (ex. boutons radio) : on ne valide pas
+        if (!champ.parentNode.querySelector(".validation")) {
+            return true;
+        }
+        conteneurErreur = document.createElement("div");
+        conteneurErreur.className = "invalid-feedback";
+        champ.parentNode.appendChild(conteneurErreur);
     }
+
     
     if (!conteneurErreur) {
         return true;
