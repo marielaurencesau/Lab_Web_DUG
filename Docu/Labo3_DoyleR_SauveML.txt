@@ -1,0 +1,12 @@
+Par 
+Rémi Doyle 
+Marie Laurence Sauvé
+
+Site publié:
+https://marielaurencesau.github.io/site_web_DUG/
+
+Repo du site publié:
+https://github.com/marielaurencesau/site_web_DUG.git
+
+Repo de travail: 
+https://github.com/marielaurencesau/Lab_Web_DUG.git
