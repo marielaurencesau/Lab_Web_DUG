@@ -562,7 +562,7 @@ body.theme-clair .texte-accueil-site ul li:nth-child(even) {
     font-weight: bold;
     transition: 0.3s;
     opacity: 75%;
-    width: 30%;
+    width: 130px;
 }
 
 
@@ -598,10 +598,12 @@ body.theme-clair .texte-accueil-site ul li:nth-child(even) {
 
 .carte-perso-libele{
     color: var(--gal_second_rouge);
+    margin-bottom: 0px;
 }
 
 .carte-perso-valeur{
     color: var(--gal_primaire_fonce);
+    margin-bottom: 0px;
 }
 
 .carte-perso-badge-hostile {
@@ -725,22 +727,23 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
 
 /* [T10] TABLEAU STYLÉ */
 .colonne1{
-    width: 10%
+    width: 10%;
+
 }
 
 /* [T10] TABLEAU STYLÉ */
 .colonne2{
-    width: 30%
+    width: 30%;
 }
 
 /* [T10] TABLEAU STYLÉ */
 .colonne3{
-    width: 15%
+    width: 15%;
 }
 
 /* [T10] TABLEAU STYLÉ */
 .colonne4{
-    width: 45%
+    width: 45%;
 }
 
 .image-tableau {
@@ -764,6 +767,7 @@ input:user-invalid + .validation::after, textarea:user-invalid + .validation::af
     --bs-btn-font-family: val(--police-texte) ;
     --bs-btn-padding-x: 1rem;
     --bs-btn-padding-y: .5rem;
+    --bs-btn-font-size: .8rem;
 }
 .btn.btn-primary.choisi {
     --bs-btn-color: var(--gal_second_bleu);
