@@ -350,6 +350,11 @@ body.theme-clair .texte-accueil-site ul li:nth-child(even) {
     font-size: 13px;
     text-align: center;
 }
+/*-----------INDEX-------------*/
+
+.vaisseau-accueil {
+    max-width: 30em;
+}
 
 /*-----------Page equipage et voyage-------------*/
 /* [T4] MODÈLE DE BOÎTE */
