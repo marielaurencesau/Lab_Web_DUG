@@ -645,6 +645,8 @@ form {
     border-radius: 10px gal;
     box-shadow: 0 0 10px var(--gal_bg_surligne_50);
     white-space: nowrap;
+    width: 23rem;
+    max-width:100%;
 }
 
 /* [T3] SÉLECTEURS */
